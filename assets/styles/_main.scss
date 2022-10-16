@@ -1,3 +1,11 @@
 .main-inner {
   padding: 2.8rem 0;
 }
+
+.main-advert {
+  padding-top: 4.3rem;
+  a {
+    display: block;
+    @include imgStyle(78rem, 13.7rem, cover);
+  }
+}
