@@ -3,6 +3,7 @@ $base-red: rgba(255, 12, 0, 1);
 $base-green: rgba(0, 130, 44, 1);
 $base-black: rgba(36, 36, 36, 1);
 $base-gray: rgba(0, 0, 0, 0.6);
+$mild-gray: rgba(85, 85, 85, 1);
 
 $border-black: rgba(0, 0, 0, 1); // Mixins
 @mixin flex($dir: row) {
@@ -15,8 +16,8 @@ $border-black: rgba(0, 0, 0, 1); // Mixins
   height: 100%;
 }
 
-@mixin transition-std {
-  transition: 0.3s all ease;
+@mixin transition-std($duration: 0.3s) {
+  transition: $duration all ease;
 }
 
 @mixin imgStyle($mWidth: unset, $mHeight: unset, $objFit: cover) {
@@ -49,4 +50,11 @@ $border-black: rgba(0, 0, 0, 1); // Mixins
   &::placeholder {
     color: $base-gray;
   }
+}
+
+@mixin sectionTitle {
+  font-size: 2.4rem;
+  color: $base-black;
+  letter-spacing: 0.1em;
+  line-height: 3.3rem;
 }

@@ -3,9 +3,13 @@
   gap: 1.5rem;
 }
 
+.main-inner-content {
+  @include stretch;
+}
+
 .main-news-lead {
   @include stretch;
-  max-width: 54.5rem;
+  max-width: 71%;
   position: relative;
   @include flex;
   justify-content: flex-start;
@@ -13,7 +17,7 @@
 }
 
 .main-news-bg {
-  @include imgStyle(54.5rem, 37rem, cover);
+  @include imgStyle($objFit: cover);
 }
 
 .main-news-overlay {
@@ -51,6 +55,7 @@
   h3 {
     font-size: 1.2rem;
     color: $base-red;
+    letter-spacing: 0.1em;
   }
 
   h4 {
@@ -68,7 +73,7 @@
 
 .main-news-min {
   @include stretch;
-  max-width: 22rem;
+  max-width: 29%;
   @include flex(column);
   gap: 1.7rem;
 }
@@ -78,7 +83,7 @@
 }
 
 .main-news-min-bg {
-  @include imgStyle(22rem, 11.2rem, cover);
+  @include imgStyle($objFit: cover);
 }
 
 .main-news-min-info {

@@ -1,11 +1,13 @@
 .main-inner {
   padding: 2.8rem 0;
+  @include grid(false, 67% auto);
+  gap: 4rem;
 }
 
 .main-advert {
   padding-top: 4.3rem;
   a {
     display: block;
-    @include imgStyle(78rem, 13.7rem, cover);
+    @include imgStyle($objFit: cover);
   }
 }
