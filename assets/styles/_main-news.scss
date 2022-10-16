@@ -5,6 +5,7 @@
 
 .main-news-lead {
   @include stretch;
+  max-width: 54.5rem;
   position: relative;
   @include flex;
   justify-content: flex-start;
@@ -19,6 +20,8 @@
   z-index: 1;
   @include stretch;
   position: absolute;
+  top: 0;
+  left: 0;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -61,4 +64,33 @@
   color: $base-white;
   line-height: 2.179rem;
   font-weight: bold;
+}
+
+.main-news-min {
+  @include stretch;
+  max-width: 22rem;
+  @include flex(column);
+  gap: 1.7rem;
+}
+
+.main-news-min-item {
+  position: relative;
+}
+
+.main-news-min-bg {
+  @include imgStyle(22rem, 11.2rem, cover);
+}
+
+.main-news-min-info {
+  position: absolute;
+  padding: 0 1.2rem;
+  left: 0;
+  bottom: 0.7rem;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.362rem;
+  color: $base-white;
+  z-index: 2;
+  font-weight: bold;
+  text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
