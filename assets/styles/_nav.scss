@@ -41,7 +41,6 @@
   @include stretch;
   background: $base-green;
   @include flex;
-  align-items: center;
   gap: 0.8rem;
 }
 
@@ -58,17 +57,21 @@
   background-position: 0% center;
 }
 
-// .swiper-ticker {
-//   height: calc(100vh - 12rem);
-//   //   margin: 6rem;
-// }
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ticker {
+  @include stretch;
+  @include flex;
 }
 
-.swiper-wrapper {
-  transition-timing-function: linear !important;
+.ticker-wrapper {
+  @include flex;
+  @include stretch;
+  gap: 2.4rem;
+
+  a {
+    display: block;
+    color: $base-white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1.1rem 0;
+  }
 }
