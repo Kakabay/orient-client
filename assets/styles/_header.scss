@@ -1,5 +1,8 @@
 .big-banner {
-  @include imgStyle($objFit: cover);
+  a {
+    display: block;
+    @include imgStyle($objFit: cover);
+  }
 }
 
 .header-inner {
