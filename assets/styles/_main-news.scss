@@ -5,6 +5,8 @@
 
 .main-inner-content {
   @include stretch;
+  @include flex(column);
+  gap: 4.2rem;
 }
 
 .main-news-lead {
