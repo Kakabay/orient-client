@@ -513,6 +513,17 @@ a {
 .aside {
   width: 100%;
   max-width: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.4rem;
+}
+
+.aside-content-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -699,5 +710,19 @@ a {
   opacity: 0;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
+}
+
+.aside-ad-wraper {
+  max-width: unset;
+  max-height: unset;
+  width: 100%;
+  height: 100%;
+}
+
+.aside-ad-wraper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

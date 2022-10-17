@@ -1,6 +1,11 @@
 .aside {
   width: 100%;
   max-width: 35rem;
+  @include flex(column);
+  gap: 3.4rem;
+}
+
+.aside-content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
@@ -133,4 +138,8 @@
       @include transition-std;
     }
   }
+}
+
+.aside-ad-wraper {
+  @include imgStyle($objFit: cover);
 }
