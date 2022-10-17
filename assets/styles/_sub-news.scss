@@ -3,9 +3,7 @@
   gap: 1.8rem;
 
   h2 {
-    font-size: 2.4rem;
-    letter-spacing: 0.1em;
-    line-height: 3.3rem;
+    @include sectionTitle;
     font-weight: 600;
   }
 }
@@ -62,9 +60,7 @@
   gap: 1.5rem;
   h2 {
     padding-bottom: 0.3rem;
-    font-size: 2.4rem;
-    letter-spacing: 0.1em;
-    line-height: 3.3rem;
+    @include sectionTitle;
     font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -87,5 +83,45 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+.sub-news-right-bottom {
+  @include flex(column);
+  gap: 1.8rem;
+
+  h2 {
+    @include sectionTitle;
+    font-weight: 600;
+  }
+}
+
+.sub-news-right-bottom-content {
+  @include grid(false, 1fr 1fr 1fr);
+  gap: 0.8rem;
+}
+
+.sub-news-right-bottom-item {
+  display: block;
+  position: relative;
+  font-size: 1.3rem;
+  background: $base-green;
+  padding: 0.6rem 1rem;
+  padding-left: 2rem;
+
+  color: $base-white;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #00822c;
+    position: absolute;
+    left: 0.6rem;
+    top: 50%;
+    background: $base-white;
   }
 }

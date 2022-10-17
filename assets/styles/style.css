@@ -743,6 +743,7 @@ a {
 
 .sub-news-left h2 {
   font-size: 2.4rem;
+  color: #242424;
   letter-spacing: 0.1em;
   line-height: 3.3rem;
   font-weight: 600;
@@ -849,6 +850,7 @@ a {
 .sub-news-right-top h2 {
   padding-bottom: 0.3rem;
   font-size: 2.4rem;
+  color: #242424;
   letter-spacing: 0.1em;
   line-height: 3.3rem;
   font-weight: 600;
@@ -887,5 +889,56 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.sub-news-right-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.8rem;
+}
+
+.sub-news-right-bottom h2 {
+  font-size: 2.4rem;
+  color: #242424;
+  letter-spacing: 0.1em;
+  line-height: 3.3rem;
+  font-weight: 600;
+}
+
+.sub-news-right-bottom-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.sub-news-right-bottom-item {
+  display: block;
+  position: relative;
+  font-size: 1.3rem;
+  background: #00822c;
+  padding: 0.6rem 1rem;
+  padding-left: 2rem;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.sub-news-right-bottom-item::before {
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #00822c;
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */
