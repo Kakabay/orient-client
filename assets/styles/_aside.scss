@@ -1,4 +1,8 @@
 .aside {
+  position: sticky;
+  height: fit-content;
+  top: 4.6rem;
+  right: 0;
   width: 100%;
   max-width: 35rem;
   @include flex(column);

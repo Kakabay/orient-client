@@ -515,6 +515,13 @@ a {
 }
 
 .aside {
+  position: -webkit-sticky;
+  position: sticky;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 4.6rem;
+  right: 0;
   width: 100%;
   max-width: 35rem;
   display: -webkit-box;
