@@ -20,3 +20,10 @@
 .banner {
   @include imgStyle($objFit: cover);
 }
+
+// PAGE CONTENT
+@import "./main/main-news";
+@import "./main/aside";
+@import "./main/sub-news";
+@import "./main/trending";
+@import "./main/posts";
