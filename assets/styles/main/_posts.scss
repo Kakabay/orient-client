@@ -2,6 +2,11 @@
   padding: 4rem 0;
 }
 
+.posts-inner {
+  @include flex(column);
+  gap: 4rem;
+}
+
 .posts-content {
   display: grid;
   grid-template-areas: "big big sm1 sm2" "big big sm3 sm4" "sm5 sm6 sm7 sm8";
