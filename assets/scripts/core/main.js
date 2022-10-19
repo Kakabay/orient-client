@@ -82,3 +82,33 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
     global: new Select(".aside-content.global").select(),
   }
 );
+
+// Swiper
+
+const videoSwiper = new Swiper(".videoSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 60,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  loop: true,
+  navigation: {
+    prevEl: ".video-prev",
+    nextEl: ".video-next",
+  },
+});
+
+const photoSwiper = new Swiper(".photoSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 60,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  loop: true,
+  navigation: {
+    prevEl: ".photo-prev",
+    nextEl: ".photo-next",
+  },
+});

@@ -1,0 +1,93 @@
+.media {
+  background: $mild-gray;
+}
+
+.media-inner {
+  padding: 4rem 0;
+  @include flex(column);
+  gap: 5.2rem;
+}
+
+.media-head {
+  h2 {
+    color: $base-white;
+  }
+  span {
+    border: 0.1rem solid $base-white;
+  }
+}
+
+.media-videos {
+  @include flex(column);
+  gap: 4rem;
+}
+
+.video-item {
+  @include flex(column);
+  gap: 0.8rem;
+}
+
+.video {
+  @include stretch;
+
+  video {
+    @include stretch;
+    object-fit: contain;
+  }
+
+  img {
+    @include stretch;
+    object-fit: contain;
+  }
+}
+
+.video-info {
+  h4,
+  span,
+  p {
+    color: $base-white;
+    font-weight: normal;
+  }
+}
+
+.swiper {
+  position: relative !important;
+}
+
+.video-prev {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 30%;
+  position: absolute;
+  background: rgba(39, 39, 39, 0.7);
+  height: 6rem;
+  width: 4rem;
+  z-index: 2;
+  cursor: pointer;
+
+  img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+.video-next {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 30%;
+  position: absolute;
+  background: rgba(39, 39, 39, 0.7);
+  height: 6rem;
+  width: 4rem;
+  z-index: 2;
+  cursor: pointer;
+
+  img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
