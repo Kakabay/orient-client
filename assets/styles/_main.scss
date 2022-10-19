@@ -10,3 +10,13 @@
     @include imgStyle($objFit: cover);
   }
 }
+
+.banners-inner {
+  @include grid(false, 1fr 1fr);
+  gap: 2.5rem;
+  @include stretch;
+}
+
+.banner {
+  @include imgStyle($objFit: cover);
+}

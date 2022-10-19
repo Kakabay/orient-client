@@ -1,0 +1,44 @@
+.posts {
+  padding: 4rem 0;
+}
+
+.posts-content {
+  display: grid;
+  grid-template-areas: "big big sm1 sm2" "big big sm3 sm4" "sm5 sm6 sm7 sm8";
+  gap: 2.5rem;
+}
+
+.posts-item {
+  &.sm {
+    .trending-img {
+      overflow: hidden;
+    }
+  }
+  &.big {
+    grid-area: big;
+  }
+  &.sm1 {
+    grid-area: sm1;
+  }
+  &.sm2 {
+    grid-area: sm2;
+  }
+  &.sm3 {
+    grid-area: sm3;
+  }
+  &.sm4 {
+    grid-area: sm4;
+  }
+  &.sm5 {
+    grid-area: sm5;
+  }
+  &.sm6 {
+    grid-area: sm6;
+  }
+  &.sm7 {
+    grid-area: sm7;
+  }
+  &.sm8 {
+    grid-area: sm8;
+  }
+}
