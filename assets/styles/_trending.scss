@@ -1,0 +1,76 @@
+.trending {
+  padding: 4.6rem 0 4rem 0;
+}
+
+.trending-inner {
+  @include grid(false, 67% auto);
+  gap: 3.6rem;
+}
+
+.trending-head {
+  @include flex;
+  align-items: center;
+  gap: 1.5rem;
+  h2 {
+    @include sectionTitle;
+    white-space: nowrap;
+  }
+  span {
+    width: 100%;
+    border-top: 0.1rem solid $base-green;
+  }
+}
+
+.trending-aside,
+.trending-main {
+  @include flex(column);
+  gap: 2.5rem;
+}
+
+.trending-aside-item {
+  @include flex(column);
+  gap: 1.6rem;
+}
+
+.trending-img {
+  @include imgStyle($objFit: cover);
+}
+
+.trending-aside-content {
+  @include stretch;
+  @include flex(column);
+  gap: 0.4rem;
+}
+
+.trending-aside-content-head {
+  h3 {
+    color: $base-green;
+  }
+
+  h4,
+  span {
+    color: $mild-gray;
+    font-weight: normal;
+  }
+}
+
+.trending-main-content {
+  @include grid(false, 1fr 1fr);
+  gap: 3.5rem;
+}
+
+.trending-item {
+  @include flex;
+  gap: 0.8rem;
+
+  .trending-img {
+    @include imgStyle(11.7rem, 7.5rem, cover);
+  }
+}
+
+.trending-main-content-inner {
+  @include stretch;
+  @include flex(column);
+  justify-content: space-between;
+  gap: 0.4rem;
+}
