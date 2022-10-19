@@ -960,6 +960,10 @@ a {
   letter-spacing: 0.05em;
 }
 
+.sub-news-right-bottom-item.red {
+  background: #ff0c00;
+}
+
 .sub-news-right-bottom-item::before {
   content: "";
   border-radius: 50%;

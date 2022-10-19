@@ -112,6 +112,10 @@
   color: $base-white;
   letter-spacing: 0.05em;
 
+  &.red {
+    background: $base-red;
+  }
+
   &::before {
     content: "";
     border-radius: 50%;
