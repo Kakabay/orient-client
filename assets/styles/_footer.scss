@@ -1,0 +1,19 @@
+.footer {
+  @include grid(false, 1fr);
+  min-height: 23.6rem;
+  @include stretch;
+  background: $light-black;
+}
+
+.footer-inner {
+  @include stretch;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.3rem;
+    color: $base-white;
+    font-weight: bold;
+  }
+}
