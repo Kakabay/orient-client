@@ -112,3 +112,18 @@ const photoSwiper = new Swiper(".photoSwiper", {
     nextEl: ".photo-next",
   },
 });
+
+const partnerSwiper = new Swiper(".partnerSwiper", {
+  slidesPerView: 5,
+  spaceBetween: 60,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  loop: true,
+  navigation: {
+    prevEl: ".partner-prev",
+    nextEl: ".partner-next",
+  },
+});

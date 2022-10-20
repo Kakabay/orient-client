@@ -91,3 +91,37 @@
     height: 3.2rem;
   }
 }
+
+.partners {
+  @include flex(column);
+  gap: 4.6rem;
+
+  .swiper-slide {
+    @include flex;
+    justify-content: center;
+  }
+
+  .swiper-slide-active {
+    .partners-item {
+      transform: scale(1.1);
+      @include transition-std;
+    }
+  }
+}
+
+.partners-item {
+  @include imgStyle(16.7rem, 8.7rem, contain);
+  transform: scale(0.8);
+  @include transition-std;
+}
+
+.partners-head {
+  @include sectionTitle;
+  text-align: center;
+  color: $base-white;
+}
+
+.partner-prev,
+.partner-next {
+  background: none;
+}
