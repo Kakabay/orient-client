@@ -1,0 +1,36 @@
+.rubric-inner {
+  padding: 4.7rem 0 8rem 0;
+  @include flex(column);
+  gap: 4.3rem;
+}
+
+.rubric-items {
+  @include flex(column);
+  gap: 8rem;
+}
+.rubric-item {
+  align-items: center;
+  gap: 1.5rem;
+  .sub-news-left-content-item-date-content-info {
+    display: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+    overflow: initial;
+    text-overflow: initial;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .sub-news-left-content-item-img {
+    @include imgStyle(35rem, 20rem, cover);
+  }
+  .sub-news-left-content-item-content {
+    gap: 0.8rem;
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+  .sub-news-left-content-item-date-content-head {
+    font-size: 1.4rem;
+    color: $base-gray;
+  }
+}
