@@ -49,6 +49,22 @@
   }
 }
 
+.nav-right {
+  @include flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav-right-link {
+  display: block;
+  background: $base-green;
+  font-size: 1.4rem;
+  padding: 0.4rem 7.8rem;
+  color: $base-white;
+  max-width: 18.6rem;
+  @include stretch;
+}
+
 .nav-lang {
   @include flex;
   align-items: center;

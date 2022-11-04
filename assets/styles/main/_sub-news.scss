@@ -108,12 +108,13 @@
   background: $base-green;
   padding: 0.6rem 1rem;
   padding-left: 2rem;
-
+  @include transition-std;
   color: $base-white;
   letter-spacing: 0.05em;
 
-  &.red {
+  &:hover {
     background: $base-red;
+    @include transition-std;
   }
 
   &::before {
