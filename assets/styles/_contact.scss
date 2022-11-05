@@ -1,0 +1,49 @@
+.contact-inner {
+  padding: 4.3rem 0 8rem;
+  @include flex(column);
+  gap: 4.3rem;
+}
+
+.contact-left,
+.contact-form,
+.contact-content {
+  @include flex(column);
+  gap: 4rem;
+}
+
+.contact-block {
+  @include flex(column);
+  gap: 1.4rem;
+
+  label {
+    color: $base-black;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    span {
+      color: red;
+    }
+  }
+
+  input,
+  textarea {
+    @include input;
+    resize: none;
+    outline: none;
+  }
+}
+
+.contact-antispam {
+  @include imgStyle(17.8rem, 3.2rem, contain);
+}
+
+.contact-content {
+  button {
+    cursor: pointer;
+    color: $base-white;
+    background: $base-green;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 17rem;
+  }
+}

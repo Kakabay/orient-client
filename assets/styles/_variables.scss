@@ -59,3 +59,8 @@ $border-black: rgba(0, 0, 0, 1); // Mixins
   letter-spacing: 0.1em;
   line-height: 3.3rem;
 }
+
+@mixin input {
+  border: 1px solid #00822c;
+  padding: 1.4rem;
+}

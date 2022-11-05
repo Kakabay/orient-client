@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <section class="big-banner">
+      <a href="#">
+        <img src="../assets/images/bigbanner.jpg" alt="" />
+      </a>
+    </section>
+    <!-- HEAD ======== -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <div class="header-logo">
+              <img src="../assets/icons/orientlogo.svg" alt="" />
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="header-ext">
+              <li>
+                <a href="#">
+                  <img src="../assets/icons/fb.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../assets/icons/insta.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../assets/icons/tg.svg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../assets/icons/twit.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+            <form class="header-search">
+              <input type="text" placeholder="Поиск..." />
+              <button type="button">
+                <div class="search-icon">
+                  <img src="../assets/icons/loop.svg" alt="" />
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="nav removed-mq">
+      <div class="container">
+        <div class="nav-inner">
+          <div class="nav-left">
+            <ul class="nav-ul">
+              <li><a href="#" class="active">Разделы</a></li>
+              <li><a href="#">Фото</a></li>
+              <li><a href="#">Видео</a></li>
+              <li><a href="#">Тендеры</a></li>
+              <li><a href="#">Объявления</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="nav-right">
+            <a class="nav-right-link">OGT</a>
+            <ul class="nav-lang">
+              <li>
+                <a href="#">
+                  <div class="lang-country">
+                    <img src="../assets/icons/ukflag.svg" alt="" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="lang-country">
+                    <img src="../assets/icons/tmflag.svg" alt="" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="lang-country">
+                    <img src="../assets/icons/ruflag.svg" alt="" />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEAD end ======== -->
+
+    <main class="contant">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-left">
+            <div class="trending-head contact-head">
+              <h2>Обратная связь</h2>
+              <span></span>
+            </div>
+            <form class="contact-form">
+              <div class="contact-content">
+                <div class="contact-block">
+                  <label for="name" name="name">Ваше имя <span>*</span></label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Аманов Аман"
+                    id="name"
+                  />
+                </div>
+                <div class="contact-block">
+                  <label for="email" name="email"
+                    >Ваше Email <span>*</span></label
+                  >
+                  <input
+                    required
+                    type="email"
+                    placeholder="amanamanov@gmail.com"
+                    id="email"
+                  />
+                </div>
+                <div class="contact-block">
+                  <label for="message" name="message">Тема сообщения</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="10"
+                    placeholder="Тема сообщения"
+                  ></textarea>
+                </div>
+                <div class="contact-antispam">
+                  <img src="../assets/images/antispam.jpg" alt="" />
+                </div>
+                <div class="contact-block">
+                  <label for="code" name="code"
+                    >Введите текст на картинке<span>*</span></label
+                  >
+                  <input type="text" required id="code" />
+                </div>
+                <button type="submit">Отправить</button>
+              </div>
+
+              <div class="contact-send"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p>
+            Copyright 2012-2022 ORIENT - ИНФОРМАЦИОННОЕ АГЕНТСТВО
+            |Пользовательское соглашение
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/scripts/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/scripts/core/article.js"></script>
+  </body>
+</html>

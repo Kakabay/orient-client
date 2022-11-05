@@ -93,21 +93,9 @@ a {
   align-items: center;
 }
 .header-search input {
-  border: 0.1rem solid rgb(0, 0, 0);
-  font-size: 1.2rem;
-  padding: 1rem 0.8rem;
-  width: 100%;
-  height: 100%;
+  border: 1px solid #00822c;
+  padding: 1.4rem;
   font-weight: bold;
-}
-.header-search input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.6);
-}
-.header-search input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.6);
-}
-.header-search input::placeholder {
-  color: rgba(0, 0, 0, 0.6);
 }
 .header-search button {
   display: flex;
@@ -1442,4 +1430,62 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2.3rem;
+}
+
+.contact-inner {
+  padding: 4.3rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.3rem;
+}
+
+.contact-left,
+.contact-form,
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.contact-block label {
+  color: rgb(36, 36, 36);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.contact-block label span {
+  color: red;
+}
+.contact-block input,
+.contact-block textarea {
+  border: 1px solid #00822c;
+  padding: 1.4rem;
+  resize: none;
+  outline: none;
+}
+
+.contact-antispam {
+  max-width: 17.8rem;
+  max-height: 3.2rem;
+  width: 100%;
+  height: 100%;
+}
+.contact-antispam img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.contact-content button {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 130, 44);
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 17rem;
 }/*# sourceMappingURL=style.css.map */
