@@ -149,3 +149,131 @@
     }
   }
 }
+
+.header-search-icon,
+.header-burger {
+  cursor: pointer;
+  display: none;
+  @include imgStyle(3.9rem, 3.9rem, contain);
+}
+
+// Burger
+
+.burger-wrapper {
+  @include grid(false, 22% 1fr);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  @include transition-std;
+
+  .burger-close {
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    @include transition-std;
+
+    img {
+      padding: 1rem 0 0 2.7rem;
+    }
+  }
+  .burger-content {
+    color: black;
+    width: 100%;
+    background: $light-black;
+    padding: 3rem 2rem;
+    overflow-y: auto;
+  }
+
+  &.active {
+    transform: translateX(0);
+
+    .burger-close {
+      width: 100%;
+    }
+  }
+}
+
+.burger-list {
+  @include flex(column);
+}
+
+.burger-list-li {
+  @include flex(column);
+
+  &.green {
+    align-items: center;
+    padding-top: 1.3rem;
+    .burger-item {
+      background: $base-green;
+      padding: 0.8rem;
+      max-width: 15rem;
+      width: 100%;
+    }
+  }
+}
+
+.burger-item {
+  font-size: 2rem;
+  color: $base-white;
+  text-align: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.burger-nested-list {
+  overflow: hidden;
+  max-height: 0;
+  @include transition-std;
+  @include flex(column);
+  align-items: center;
+  li {
+    @include stretch;
+    @include grid(false, 1fr);
+  }
+  a {
+    justify-self: center;
+    width: 50%;
+    color: $base-white;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    background: $light-gray;
+    @include transition-std;
+
+    &:hover {
+      background: $mild-gray;
+      @include transition-std;
+    }
+  }
+
+  &.active {
+    max-height: 50rem;
+    @include transition-std;
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1100px) {
+  .nav-ul {
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav,
+  .header-right {
+    display: none;
+  }
+  .header-search-icon,
+  .header-burger {
+    display: block;
+  }
+}

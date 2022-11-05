@@ -5,6 +5,7 @@ $base-black: rgba(36, 36, 36, 1);
 $light-black: rgba(56, 56, 56, 1);
 $base-gray: rgba(0, 0, 0, 0.6);
 $mild-gray: rgba(85, 85, 85, 1);
+$light-gray: rgba(101, 101, 101, 1);
 
 $border-black: rgba(0, 0, 0, 1); // Mixins
 @mixin flex($dir: row) {
