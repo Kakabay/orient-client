@@ -191,3 +191,42 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
     nextEl: ".partner-next",
   },
 });
+
+// Burger
+const burgerPair = new AssignEvent(
+  ".header-burger",
+  "click",
+  "add",
+  "active",
+  ".burger-wrapper",
+  () => {
+    document.body.style.overflowY = "hidden";
+  }
+).listen();
+
+const burgerClosePair = new AssignEvent(
+  ".burger-close",
+  "click",
+  "remove",
+  "active",
+  ".burger-wrapper",
+  () => {
+    document.body.style.overflowY = "auto";
+  }
+).listen();
+
+const burgerNewsPair = new AssignEvent(
+  ".burger-news",
+  "click",
+  "toggle",
+  "active",
+  ".burger-news-items"
+).listen();
+
+const burgerAffichePair = new AssignEvent(
+  ".burger-affiche",
+  "click",
+  "toggle",
+  "active",
+  ".burger-affiche-items"
+).listen();

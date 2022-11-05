@@ -296,7 +296,8 @@
 
 @media screen and (max-width: 950px) {
   .nav,
-  .header-right {
+  .header-right,
+  .nav-bottom-inner {
     display: none;
   }
   .header-search-icon,
