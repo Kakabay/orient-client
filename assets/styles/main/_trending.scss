@@ -3,8 +3,12 @@
 }
 
 .trending-inner {
-  @include grid(false, 67% auto);
+  @include grid(false, 1fr 1fr 1fr);
   gap: 3.6rem;
+}
+
+.trending-banner {
+  @include imgStyle(unset, unset, contain);
 }
 
 .trending-head {
@@ -55,7 +59,7 @@
 }
 
 .trending-main-content {
-  @include grid(false, 1fr 1fr);
+  @include grid(false, 1fr);
   gap: 3.5rem;
 }
 

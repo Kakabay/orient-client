@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -775,8 +775,21 @@ a {
 
 .trending-inner {
   display: grid;
-  grid-template-columns: 67% auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3.6rem;
+}
+
+.trending-banner {
+  max-width: unset;
+  max-height: unset;
+  width: 100%;
+  height: 100%;
+}
+.trending-banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .trending-head {
@@ -842,7 +855,7 @@ a {
 
 .trending-main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 3.5rem;
 }
 
@@ -1118,6 +1131,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+.useful-main-content {
+  grid-template-columns: 1fr 1fr;
 }
 
 .footer {

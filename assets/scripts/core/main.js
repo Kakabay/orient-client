@@ -88,10 +88,7 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
 const videoSwiper = new Swiper(".videoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
+  lazyLoading: true,
   loop: true,
   navigation: {
     prevEl: ".video-prev",
@@ -102,10 +99,6 @@ const videoSwiper = new Swiper(".videoSwiper", {
 const photoSwiper = new Swiper(".photoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
   loop: true,
   navigation: {
     prevEl: ".photo-prev",
