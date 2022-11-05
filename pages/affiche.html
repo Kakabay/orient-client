@@ -10,7 +10,13 @@
   <body>
     <section class="big-banner">
       <a href="#">
-        <img src="../assets/images/bigbanner.jpg" alt="" />
+        <picture>
+          <source
+            media="(min-width: 900px)"
+            srcset="../assets/images/bigbanner.jpg"
+          />
+          <img src="../assets/images/smallbanner.jpg" alt="" />
+        </picture>
       </a>
     </section>
     <!-- HEAD ======== -->
@@ -18,9 +24,9 @@
       <div class="container">
         <div class="header-inner">
           <div class="header-left">
-            <div class="header-logo">
+            <a href="#" class="header-logo">
               <img src="../assets/icons/orientlogo.svg" alt="" />
-            </div>
+            </a>
           </div>
           <div class="header-right">
             <ul class="header-ext">
