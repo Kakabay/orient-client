@@ -73,6 +73,28 @@ class NewsBtn {
   }
 }
 
+class AssignYear {
+  element;
+  /**
+   * @param {string} id
+   * ID of an element
+   */
+  constructor(id) {
+    this.element = new Select(id).select();
+  }
+  /**
+   * @returns `current year`
+   */
+  assign() {
+    const year = new Date().getFullYear();
+    this.element.innerText = year;
+    return year;
+  }
+}
+
+// Year
+const displayedYear = new AssignYear("#year").assign();
+
 const buttonLocal = new NewsBtn(".news-local").createBtn();
 const runBtns = new NewsBtn(".news-global").activateSwitch(
   buttonLocal,

@@ -73,6 +73,28 @@ class NewsBtn {
   }
 }
 
+class AssignYear {
+  element;
+  /**
+   * @param {string} id
+   * ID of an element
+   */
+  constructor(id) {
+    this.element = new Select(id).select();
+  }
+  /**
+   * @returns `current year`
+   */
+  assign() {
+    const year = new Date().getFullYear();
+    this.element.innerText = year;
+    return year;
+  }
+}
+
+// Year
+const displayedYear = new AssignYear("#year").assign();
+
 const buttonLocal = new NewsBtn(".news-local").createBtn();
 const runBtns = new NewsBtn(".news-global").activateSwitch(
   buttonLocal,
@@ -89,7 +111,6 @@ const videoSwiper = new Swiper(".videoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
   lazyLoading: true,
-  loop: true,
   navigation: {
     prevEl: ".video-prev",
     nextEl: ".video-next",
@@ -110,10 +131,6 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
   slidesPerView: 5,
   spaceBetween: 60,
   centeredSlides: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
   loop: true,
   navigation: {
     prevEl: ".partner-prev",
