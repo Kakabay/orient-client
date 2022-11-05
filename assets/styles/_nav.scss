@@ -181,6 +181,9 @@
     }
   }
   .burger-content {
+    @include flex(column);
+    gap: 4rem;
+    justify-content: space-between;
     color: black;
     width: 100%;
     background: $light-black;
@@ -256,6 +259,30 @@
   &.active {
     max-height: 50rem;
     @include transition-std;
+  }
+}
+
+.burger-lang {
+  @include flex;
+  align-items: center;
+  gap: 1.6rem;
+  justify-content: center;
+
+  ul {
+    @include flex;
+    align-items: center;
+    gap: 1.6rem;
+    justify-content: center;
+
+    button {
+      width: 4.3rem;
+      height: 3rem;
+
+      img {
+        width: 4.3rem;
+        height: 3rem;
+      }
+    }
   }
 }
 
