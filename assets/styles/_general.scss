@@ -39,3 +39,11 @@ a {
   padding: 0 4rem;
   margin: 0 auto;
 }
+
+// Media
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 3rem;
+  }
+}

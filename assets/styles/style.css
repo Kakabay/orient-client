@@ -42,6 +42,11 @@ a {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
 .big-banner a {
   display: block;
   max-width: unset;
@@ -1033,6 +1038,11 @@ a {
   gap: 0.4rem;
 }
 
+@media screen and (max-width: 800px) {
+  .trending-head h2 {
+    font-size: 2rem;
+  }
+}
 .posts {
   padding: 4rem 0;
 }
@@ -1305,6 +1315,7 @@ a {
   font-size: 1.3rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
+  text-align: center;
 }
 
 .video-main-inner {
@@ -1647,4 +1658,26 @@ a {
   padding: 1rem 0;
   width: 100%;
   max-width: 17rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-inner {
+    padding: 2.2rem 0 5rem;
+  }
+  .contact-left {
+    gap: 3.4rem;
+  }
+  .contact-form,
+.contact-content {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-block textarea {
+    height: 100%;
+    max-height: 7rem;
+  }
+  .contact-content button {
+    max-width: unset;
+  }
 }/*# sourceMappingURL=style.css.map */
