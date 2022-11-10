@@ -1,2 +1,58 @@
-// PAGE CONTENT
-@import "./video/video-main";
+.video-main-inner {
+  padding: 4.7rem 0 8rem 0;
+  @include flex(column);
+  gap: 4.3rem;
+}
+
+.video-main-top {
+  @include grid(false, repeat(3, 1fr));
+  gap: 6rem;
+
+  h4,
+  span,
+  p {
+    color: $border-black;
+  }
+}
+
+.video-main-bottom {
+  padding-top: 3.7rem;
+  @include flex;
+  gap: 2.6rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    font-size: 1.6rem;
+    color: $base-green;
+  }
+}
+
+.video-main-pagination {
+  cursor: pointer;
+  @include imgStyle(4.1rem, 3.8rem, contain);
+  background: $light-black;
+  width: 4.1rem;
+  height: 3.8rem;
+}
+
+// Media
+@media screen and (max-width: 950px) {
+  .video-main-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .video-main-inner {
+    padding: 2.2rem 0 5rem;
+    gap: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .video-main-top {
+    grid-template-columns: 1fr;
+  }
+}

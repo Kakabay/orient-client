@@ -1366,6 +1366,23 @@ a {
      object-fit: contain;
 }
 
+@media screen and (max-width: 950px) {
+  .video-main-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .video-main-inner {
+    padding: 2.2rem 0 5rem;
+    gap: 1.3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .video-main-top {
+    grid-template-columns: 1fr;
+  }
+}
 .rubric-inner {
   padding: 4.7rem 0 8rem 0;
   display: flex;
