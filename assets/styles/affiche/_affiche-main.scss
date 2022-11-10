@@ -29,3 +29,36 @@
     object-fit: contain;
   }
 }
+
+// Media
+@media screen and (max-width: 850px) {
+  .affiche-inner {
+    gap: 2.8rem;
+  }
+  .affiche-items {
+    gap: 4rem;
+  }
+
+  .affiche-item {
+    flex-direction: column;
+
+    .sub-news-left-content-item-img {
+      max-width: unset;
+      max-height: unset;
+    }
+
+    .sub-news-left-content-item-date-content-head {
+      font-size: 1.3rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .affiche-inner {
+    padding: 2.2rem 0 5rem;
+  }
+}

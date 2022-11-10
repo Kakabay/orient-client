@@ -1555,6 +1555,32 @@ a {
      object-fit: contain;
 }
 
+@media screen and (max-width: 850px) {
+  .affiche-inner {
+    gap: 2.8rem;
+  }
+  .affiche-items {
+    gap: 4rem;
+  }
+  .affiche-item {
+    flex-direction: column;
+  }
+  .affiche-item .sub-news-left-content-item-img {
+    max-width: unset;
+    max-height: unset;
+  }
+  .affiche-item .sub-news-left-content-item-date-content-head {
+    font-size: 1.3rem;
+  }
+  .affiche-item h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .affiche-inner {
+    padding: 2.2rem 0 5rem;
+  }
+}
 .affiche-item-inner {
   padding: 4.6rem 0 8rem 0;
   display: grid;
