@@ -48,3 +48,41 @@
   @include flex(column);
   gap: 2.3rem;
 }
+
+// Media
+@media screen and (max-width: 1080px) {
+  .affiche-item-inner {
+    grid-template-columns: 1fr;
+  }
+  .affiche-item-aside {
+    display: none;
+  }
+  .affiche-item-top {
+    @include flex(column-reverse);
+  }
+
+  .affiche-item-top {
+    .affiche-item-data {
+      justify-self: unset;
+      align-self: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .affiche-item-head {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    span {
+      font-size: 1.3rem;
+      color: $mild-gray;
+    }
+  }
+  .affiche-item-bottom {
+    font-size: 1.5rem;
+  }
+}

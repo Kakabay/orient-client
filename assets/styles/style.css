@@ -246,6 +246,7 @@ a {
 }
 
 .nav-bottom-inner {
+  overflow-x: auto;
   background: rgb(0, 130, 44);
   padding: 0 3.5rem;
 }
@@ -1619,6 +1620,38 @@ a {
   gap: 2.3rem;
 }
 
+@media screen and (max-width: 1080px) {
+  .affiche-item-inner {
+    grid-template-columns: 1fr;
+  }
+  .affiche-item-aside {
+    display: none;
+  }
+  .affiche-item-top {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .affiche-item-top .affiche-item-data {
+    justify-self: unset;
+    align-self: unset;
+  }
+}
+@media screen and (max-width: 800px) {
+  .affiche-item-head {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .affiche-item-head h1 {
+    font-size: 1.7rem;
+  }
+  .affiche-item-head span {
+    font-size: 1.3rem;
+    color: rgb(85, 85, 85);
+  }
+  .affiche-item-bottom {
+    font-size: 1.5rem;
+  }
+}
 .contact-inner {
   padding: 4.3rem 0 8rem;
   display: flex;
