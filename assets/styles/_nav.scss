@@ -116,6 +116,7 @@
 }
 
 .nav-bottom-inner {
+  overflow-x: auto;
   background: $base-green;
   padding: 0 3.5rem;
   ul {
