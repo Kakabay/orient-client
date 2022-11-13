@@ -1,1 +1,143 @@
-@import "./article/article-main";
+.article-inner {
+  padding: 3rem 0 4rem;
+  @include grid(false, 67% auto);
+  gap: 4rem;
+}
+
+.article-content-top {
+  @include flex(column);
+  gap: 1.2rem;
+}
+
+.article-item {
+  @include imgStyle($objFit: cover);
+}
+
+.article-prev,
+.article-next {
+  top: 45%;
+}
+
+.article-head {
+  @include flex(column);
+  gap: 1.2rem;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.3rem;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $base-green;
+  }
+}
+
+.article-content {
+  @include flex(column);
+  gap: 4rem;
+}
+
+.article-desc {
+  padding-top: 1.8rem;
+  @include flex(column);
+  gap: 2.4rem;
+  p,
+  h5 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.article-links {
+  padding-top: 2.8rem;
+}
+
+.article-content-bottom {
+  @include flex(column);
+  gap: 3.2rem;
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+.article-bottom-head {
+  h4,
+  span {
+    color: $base-black;
+    font-weight: 300;
+  }
+}
+
+.article-content-info {
+  color: $base-black !important;
+
+  font-weight: bold !important;
+}
+
+.article-items {
+  display: none;
+}
+
+// Media
+@media screen and (max-width: 1080px) {
+  .article-aside {
+    display: none;
+  }
+  .article-inner {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .article-inner {
+    padding: 2.2rem 0 5rem;
+  }
+  .article-head {
+    flex-direction: column-reverse;
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    span {
+      font-size: 1.3rem;
+      color: $mild-gray;
+    }
+  }
+  .article-content-top {
+    gap: 2.5rem;
+  }
+  .article-content-bottom {
+    gap: 2.5rem;
+    h3 {
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .article-swiper-wrapper-lower {
+    display: none;
+  }
+  .article-items {
+    @include flex(column);
+    gap: 2.5rem;
+  }
+  .article-content-info {
+    font-size: 1.5rem;
+  }
+  .article-bottom-head {
+    font-size: 1.3rem;
+  }
+  .sub-news-left-content-item-content {
+    gap: 0.5rem;
+  }
+  .article-bottom-item {
+    gap: 1.4rem;
+  }
+}
