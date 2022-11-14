@@ -80,10 +80,27 @@
 }
 
 // Media
+@media screen and (max-width: 1150px) {
+  .trending-banner {
+    display: none;
+  }
+  .trending-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 950px) {
+  .trending-inner {
+    @include flex(column-reverse);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .trending-head {
     h2 {
       font-size: 2rem;
     }
+  }
+  .trending-main-content {
+    gap: 2.5rem;
   }
 }

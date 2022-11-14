@@ -144,6 +144,41 @@
   }
 }
 
-.aside-ad-wraper {
+.aside-ad-wrapper {
   @include imgStyle($objFit: cover);
+}
+
+.aside-container {
+  width: 100%;
+  padding: 0 11% 0 0;
+  max-width: unset;
+}
+
+// Media
+@media screen and (max-width: 1070px) {
+  .aside {
+    max-width: unset;
+  }
+  .aside-ad-wrapper {
+    a {
+      @include stretch;
+      @include flex;
+      justify-content: center;
+    }
+  }
+  .aside-container {
+    max-width: 174rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .aside-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .aside-content-wrapper {
+    gap: 2.2rem;
+  }
 }

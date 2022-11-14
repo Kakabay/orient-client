@@ -21,6 +21,23 @@
   @include imgStyle($objFit: cover);
 }
 
+// Media
+
+@media screen and (max-width: 950px) {
+  .banner-container {
+    max-width: unset;
+    padding: 0;
+  }
+  .banner {
+    &:last-child {
+      display: none;
+    }
+  }
+  .banners-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
 // PAGE CONTENT
 @import "./main/main-news";
 @import "./main/aside";
