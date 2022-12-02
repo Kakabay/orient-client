@@ -4,7 +4,7 @@
   top: 4.6rem;
   right: 0;
   width: 100%;
-  max-width: 35rem;
+  // max-width: 35rem;
   @include flex(column);
   gap: 3.4rem;
 }
@@ -27,7 +27,7 @@
     text-align: left;
     position: relative;
     padding: 0.6rem;
-    padding-left: 2rem;
+    padding-left: 1.7rem;
     cursor: pointer;
     width: 100%;
     border: 0.1rem solid $base-green;
@@ -113,6 +113,11 @@
 .aside-content-item-info {
   font-size: 1.3rem;
   line-height: 1.77rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .aside-content-more {
@@ -150,7 +155,7 @@
 
 .aside-container {
   width: 100%;
-  padding: 0 11% 0 0;
+  padding: 0 4rem 0 0;
   max-width: unset;
 }
 

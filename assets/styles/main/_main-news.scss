@@ -10,7 +10,7 @@
 }
 
 .main-news-lead {
-  @include stretch;
+  width: 100%;
   max-width: 71%;
   position: relative;
   @include flex;
@@ -73,6 +73,10 @@
   font-weight: bold;
 }
 
+.main-news-container {
+  padding-right: 0;
+}
+
 .main-news-min {
   @include stretch;
   max-width: 29%;
@@ -104,6 +108,9 @@
 
 // Media
 @media screen and (max-width: 1070px) {
+  .main-news-container {
+    padding-right: 4rem;
+  }
   .main-inner {
     @include flex(column);
   }

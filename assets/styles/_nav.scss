@@ -11,9 +11,11 @@
 
 .nav-inner {
   padding: 0.2rem 0;
-  @include flex;
-  justify-content: space-between;
-  gap: 3.2rem;
+  // @include flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: 68% auto;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -52,6 +54,7 @@
 .nav-right {
   @include flex;
   align-items: center;
+  justify-content: space-between;
   gap: 5rem;
 }
 
@@ -289,9 +292,23 @@
 
 // Media
 
+@media screen and (max-width: 1300px) {
+  .nav-right-link {
+    width: 11rem;
+    padding: 0.4rem 0;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1100px) {
   .nav-ul {
     gap: 1.6rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .nav-inner {
+    @include flex;
+    grid-template-columns: unset;
+    justify-content: space-between;
   }
 }
 

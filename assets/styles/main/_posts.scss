@@ -52,6 +52,7 @@
 @media screen and (max-width: 950px) {
   .posts-item.big {
     grid-area: none;
+    @include stretch;
   }
   .posts-content {
     @include flex;
