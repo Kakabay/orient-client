@@ -5,6 +5,7 @@
 }
 
 .rubric-items {
+  padding: 0 6.7rem;
   @include flex(column);
   gap: 8rem;
 }
@@ -12,11 +13,11 @@
   align-items: center;
   gap: 1.5rem;
   .sub-news-left-content-item-date-content-info {
-    display: initial;
-    -webkit-line-clamp: initial;
-    -webkit-box-orient: initial;
-    overflow: initial;
-    text-overflow: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
@@ -32,5 +33,27 @@
   .sub-news-left-content-item-date-content-head {
     font-size: 1.4rem;
     color: $base-gray;
+  }
+}
+
+.rubric-bottom {
+  padding: 0 6.7rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .rubric-items,
+  .rubric-bottom {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .rubric-item {
+    flex-direction: column;
+
+    .sub-news-left-content-item-img {
+      max-width: unset;
+      max-height: unset;
+    }
   }
 }
