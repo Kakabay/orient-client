@@ -60,13 +60,19 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.big-banner * {
+  display: block;
+}
+
+.header {
+  border-top: 0.2rem black solid;
+}
 
 .header-inner {
   padding: 1.2rem 0;
-  gap: 2.4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: 68% auto;
   align-items: center;
 }
 
@@ -82,7 +88,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 1.6rem;
+  gap: 2.6rem;
 }
 
 .header-ext {
@@ -100,6 +106,7 @@ a {
 .header-search input {
   border: 1px solid #00822c;
   padding: 1.4rem;
+  width: 100%;
   font-weight: bold;
 }
 .header-search button {
@@ -122,6 +129,13 @@ a {
   height: 2.5rem;
 }
 
+@media screen and (max-width: 950px) {
+  .header-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .nav {
   background: rgb(36, 36, 36);
   box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
@@ -202,6 +216,7 @@ a {
 }
 
 .marquee-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   background: rgb(0, 130, 44);
@@ -211,6 +226,10 @@ a {
 }
 
 .marquee-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
   padding: 1rem 3rem;
   padding-right: 4rem;
   font-size: 1.3rem;
@@ -218,6 +237,7 @@ a {
   font-weight: bold;
   max-width: 12rem;
   width: 100%;
+  height: 100%;
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;
@@ -1587,6 +1607,7 @@ a {
 }
 
 .rubric-items {
+  padding: 0 6.7rem;
   display: flex;
   flex-direction: column;
   gap: 8rem;
@@ -1597,11 +1618,11 @@ a {
   gap: 1.5rem;
 }
 .rubric-item .sub-news-left-content-item-date-content-info {
-  display: initial;
-  -webkit-line-clamp: initial;
-  -webkit-box-orient: initial;
-  overflow: initial;
-  text-overflow: initial;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
@@ -1628,6 +1649,25 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.rubric-bottom {
+  padding: 0 6.7rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .rubric-items,
+.rubric-bottom {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .rubric-item {
+    flex-direction: column;
+  }
+  .rubric-item .sub-news-left-content-item-img {
+    max-width: unset;
+    max-height: unset;
+  }
+}
 .article-inner {
   padding: 3rem 0 4rem;
   display: grid;
