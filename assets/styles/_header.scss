@@ -7,9 +7,9 @@
 
 .header-inner {
   padding: 1.2rem 0;
-  gap: 2.4rem;
-  @include flex;
-  justify-content: space-between;
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: 68% auto;
   align-items: center;
 }
 
@@ -38,6 +38,7 @@
 
   input {
     @include input;
+    width: 100%;
     font-weight: bold;
   }
 
@@ -58,4 +59,11 @@
     height: 2.5rem;
   }
   @include stretch;
+}
+
+@media screen and (max-width: 950px) {
+  .header-inner {
+    @include flex;
+    justify-content: space-between;
+  }
 }
