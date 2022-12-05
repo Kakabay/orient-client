@@ -80,6 +80,7 @@
 }
 
 .marquee-inner {
+  position: relative;
   @include stretch;
   background: $base-green;
   @include flex;
@@ -87,13 +88,17 @@
 }
 
 .marquee-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
   padding: 1rem 3rem;
   padding-right: 4rem;
   font-size: 1.3rem;
   color: $base-white;
   font-weight: bold;
   max-width: 12rem;
-  width: 100%;
+  @include stretch;
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;
