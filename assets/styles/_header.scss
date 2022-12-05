@@ -3,6 +3,14 @@
     display: block;
     @include imgStyle($objFit: cover);
   }
+
+  * {
+    display: block;
+  }
+}
+
+.header {
+  border-top: 0.2rem black solid;
 }
 
 .header-inner {
