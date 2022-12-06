@@ -647,7 +647,7 @@ a {
   left: 0;
   bottom: 0.7rem;
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.362rem;
   color: rgb(255, 255, 255);
   z-index: 2;
@@ -719,6 +719,7 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 .aside-btns button {
+  font-size: 1.2rem;
   text-align: left;
   position: relative;
   padding: 0.6rem;

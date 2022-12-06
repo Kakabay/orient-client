@@ -24,6 +24,7 @@
   list-style-type: disc;
   @include grid(false, 1fr 1fr);
   button {
+    font-size: 1.2rem;
     text-align: left;
     position: relative;
     padding: 0.6rem;
