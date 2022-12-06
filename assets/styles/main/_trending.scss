@@ -66,6 +66,7 @@
 .trending-item {
   @include flex;
   gap: 0.8rem;
+  align-items: flex-end;
 
   .trending-img {
     @include imgStyle(11.7rem, 7.5rem, cover);
@@ -76,6 +77,7 @@
   @include stretch;
   @include flex(column);
   gap: 0.4rem;
+  justify-content: flex-end;
 }
 
 // Media

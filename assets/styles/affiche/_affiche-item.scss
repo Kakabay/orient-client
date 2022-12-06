@@ -17,7 +17,7 @@
     font-size: 2.4rem;
   }
   span {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $base-green;
   }
 }
@@ -41,7 +41,7 @@
 .affiche-item-bottom {
   @include flex(column);
   gap: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .affiche-item-item {
@@ -74,15 +74,15 @@
     flex-direction: column-reverse;
     gap: 1rem;
     h1 {
-      font-size: 1.7rem;
+      font-size: 1.9rem;
     }
 
     span {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: $mild-gray;
     }
   }
   .affiche-item-bottom {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }

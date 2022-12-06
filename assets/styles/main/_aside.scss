@@ -98,20 +98,20 @@
 
   h3 {
     color: $base-red;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 0.1em;
   }
 
   h4,
   span {
     color: $mild-gray;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: normal;
   }
 }
 
 .aside-content-item-info {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.77rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -125,7 +125,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   border: 0.1rem solid $base-green;
   padding: 0.6rem 1rem;
   background: transparent;
@@ -181,7 +181,7 @@
 @media screen and (max-width: 800px) {
   .aside-title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .aside-content-wrapper {
     gap: 2.2rem;
