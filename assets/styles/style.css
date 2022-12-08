@@ -478,6 +478,8 @@ a {
   display: grid;
   grid-template-columns: 67% auto;
   gap: 4rem;
+  max-width: 174rem;
+  margin: 0 auto;
 }
 
 .main-advert a {
