@@ -37,7 +37,8 @@
 
   img {
     @include stretch;
-    object-fit: contain;
+    height: 24rem;
+    object-fit: cover;
   }
 }
 

@@ -11,6 +11,7 @@
 
 .article-item {
   @include imgStyle($objFit: cover);
+  max-height: 65rem;
 }
 
 .article-prev,

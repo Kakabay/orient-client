@@ -1,10 +1,10 @@
 @import "./swiper-bundle.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -106,6 +106,7 @@ a {
 .header-search input {
   border: 1px solid #00822c;
   padding: 1.4rem;
+  padding: 1rem 0.6rem;
   width: 100%;
   font-weight: bold;
 }
@@ -115,12 +116,16 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 0.85rem;
-  height: 100%;
+  padding: 0 0.8rem;
+  height: 3.8rem;
   border: 0.1rem solid rgb(0, 0, 0);
 }
 
 .search-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -194,7 +199,7 @@ a {
 
 .nav-right-link {
   display: block;
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   font-size: 1.6rem;
   padding: 0.4rem 7.8rem;
   color: rgb(255, 255, 255);
@@ -219,7 +224,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   display: flex;
   flex-direction: row;
   gap: 0.8rem;
@@ -267,7 +272,7 @@ a {
 
 .nav-bottom-inner {
   overflow-x: auto;
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   padding: 0 3.5rem;
 }
 .nav-bottom-inner ul {
@@ -369,7 +374,7 @@ a {
   padding-top: 1.3rem;
 }
 .burger-list-li.green .burger-item {
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   padding: 0.8rem;
   max-width: 15rem;
   width: 100%;
@@ -581,6 +586,7 @@ a {
   z-index: 2;
   position: absolute;
   bottom: 3.2rem;
+  gap: 1rem;
   left: 0rem;
   width: 100%;
   display: flex;
@@ -597,7 +603,8 @@ a {
   color: rgb(255, 255, 255);
 }
 .main-news-info-title h3 {
-  font-size: 1.4rem;
+  font-weight: bold;
+  font-size: 1.6rem;
   color: rgb(255, 12, 0);
   letter-spacing: 0.1em;
 }
@@ -650,7 +657,7 @@ a {
   bottom: 0.7rem;
   display: block;
   font-size: 1.2rem;
-  line-height: 1.362rem;
+  line-height: 1.6rem;
   color: rgb(255, 255, 255);
   z-index: 2;
   font-weight: bold;
@@ -693,7 +700,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  top: 4.6rem;
+  top: 2.5rem;
   right: 0;
   width: 100%;
   display: flex;
@@ -728,8 +735,8 @@ a {
   padding-left: 1.7rem;
   cursor: pointer;
   width: 100%;
-  border: 0.1rem solid rgb(0, 130, 44);
-  color: rgb(0, 130, 44);
+  border: 0.1rem solid rgb(3, 159, 55);
+  color: rgb(3, 159, 55);
   background: rgb(255, 255, 255);
   transition: 0.3s all ease;
 }
@@ -739,7 +746,7 @@ a {
   display: block;
   width: 0.4rem;
   height: 0.4rem;
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   position: absolute;
   left: 0.6rem;
   top: 50%;
@@ -748,7 +755,7 @@ a {
 }
 .aside-btns button.active {
   color: rgb(255, 255, 255);
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   transition: 0.3s all ease;
 }
 .aside-btns button.active::before {
@@ -793,7 +800,7 @@ a {
 }
 .aside-content-item-title h3 {
   color: rgb(255, 12, 0);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1em;
 }
 .aside-content-item-title h4,
@@ -820,7 +827,7 @@ a {
   justify-content: center;
   gap: 1rem;
   font-size: 1.5rem;
-  border: 0.1rem solid rgb(0, 130, 44);
+  border: 0.1rem solid rgb(3, 159, 55);
   padding: 0.6rem 1rem;
   background: transparent;
   color: rgb(36, 36, 36);
@@ -832,7 +839,7 @@ a {
 }
 .aside-content-more:hover {
   color: rgb(255, 255, 255);
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   transition: 0.3s all ease;
 }
 .aside-content-more:hover img {
@@ -945,7 +952,7 @@ a {
   flex-direction: row;
   align-items: center;
   gap: 0.4rem;
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
   font-size: 1.4rem;
 }
 
@@ -1033,7 +1040,7 @@ a {
   display: block;
   position: relative;
   font-size: 1.5rem;
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   padding: 0.6rem 1rem;
   padding-left: 2rem;
   transition: 0.3s all ease;
@@ -1125,7 +1132,7 @@ a {
 }
 .trending-head span {
   width: 100%;
-  border-top: 0.1rem solid rgb(0, 130, 44);
+  border-top: 0.1rem solid rgb(3, 159, 55);
 }
 
 .trending-aside,
@@ -1163,7 +1170,7 @@ a {
 }
 
 .trending-aside-content-head h3 {
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
 }
 .trending-aside-content-head h4,
 .trending-aside-content-head span {
@@ -1331,8 +1338,9 @@ a {
 .video img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .video-info h4,
@@ -1434,7 +1442,7 @@ a {
   }
 }
 .useful-inner {
-  padding: 4rem 0;
+  padding: 4rem 0 5rem;
   display: grid;
   grid-template-columns: 67% auto;
   gap: 3.6rem;
@@ -1448,7 +1456,7 @@ a {
 }
 .useful-aside-item-top span {
   font-size: 1.4rem;
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
   font-weight: 300;
 }
 
@@ -1567,7 +1575,7 @@ a {
 }
 .video-main-bottom span {
   font-size: 1.8rem;
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
 }
 
 .video-main-pagination {
@@ -1691,6 +1699,7 @@ a {
   max-height: unset;
   width: 100%;
   height: 100%;
+  max-height: 65rem;
 }
 .article-item img {
   width: 100%;
@@ -1717,7 +1726,7 @@ a {
 .article-head span {
   font-weight: 600;
   font-size: 1.7rem;
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
 }
 
 .article-content {
@@ -1905,7 +1914,7 @@ a {
 }
 .affiche-item-head span {
   font-size: 1.7rem;
-  color: rgb(0, 130, 44);
+  color: rgb(3, 159, 55);
 }
 
 .affiche-item-img {
@@ -2031,7 +2040,7 @@ a {
 .contact-content button {
   cursor: pointer;
   color: rgb(255, 255, 255);
-  background: rgb(0, 130, 44);
+  background: rgb(3, 159, 55);
   padding: 1rem 0;
   width: 100%;
   max-width: 17rem;

@@ -46,6 +46,7 @@
 
   input {
     @include input;
+    padding: 1rem 0.6rem;
     width: 100%;
     font-weight: bold;
   }
@@ -55,13 +56,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 0.85rem;
-    height: 100%;
+    padding: 0 0.8rem;
+    height: 3.8rem;
     border: 0.1rem solid $border-black;
   }
 }
 
 .search-icon {
+  @include flex;
+  align-items: center;
+  justify-content: center;
   img {
     width: 2.5rem;
     height: 2.5rem;
@@ -69,6 +73,13 @@
   @include stretch;
 }
 
+// @media screen and (max-width: 1070px) {
+//   .header-inner {
+//     @include flex;
+//     grid-template-columns: unset;
+//     justify-content: space-between;
+//   }
+// }
 @media screen and (max-width: 950px) {
   .header-inner {
     @include flex;
