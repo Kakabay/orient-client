@@ -59,12 +59,21 @@
 }
 
 .nav-right-link {
+  // display: block;
+  // background: $base-green;
+  // font-size: 1.6rem;
+  // padding: 0.4rem 7.8rem;
+  // color: $base-white;
+  // max-width: 18.6rem;
+  //
   display: block;
-  background: $base-green;
-  font-size: 1.6rem;
-  padding: 0.4rem 7.8rem;
-  color: $base-white;
-  max-width: 18.6rem;
+  font-weight: bold;
+  text-align: center;
+  background: rgb(3, 159, 55);
+  font-size: 1.5rem;
+  padding: 0.1rem 0rem;
+  color: rgb(255, 255, 255);
+  max-width: 12.6rem;
   @include stretch;
 }
 

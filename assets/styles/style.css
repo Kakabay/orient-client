@@ -199,11 +199,13 @@ a {
 
 .nav-right-link {
   display: block;
+  font-weight: bold;
+  text-align: center;
   background: rgb(3, 159, 55);
-  font-size: 1.6rem;
-  padding: 0.4rem 7.8rem;
+  font-size: 1.5rem;
+  padding: 0.1rem 0rem;
   color: rgb(255, 255, 255);
-  max-width: 18.6rem;
+  max-width: 12.6rem;
   width: 100%;
   height: 100%;
 }
@@ -481,7 +483,7 @@ a {
 .main-inner {
   padding: 2.8rem 0;
   display: grid;
-  grid-template-columns: 67% auto;
+  grid-template-columns: 72% auto;
   gap: 4rem;
   max-width: 174rem;
   margin: 0 auto;
@@ -535,9 +537,10 @@ a {
   }
 }
 .main-news-inner {
-  display: flex;
-  flex-direction: row;
   gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 71% auto;
+  align-items: stretch;
 }
 
 .main-inner-content {
@@ -550,7 +553,6 @@ a {
 
 .main-news-lead {
   width: 100%;
-  max-width: 71%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -614,7 +616,7 @@ a {
 }
 
 .main-news-info-content {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   line-height: 2.179rem;
   font-weight: bold;
@@ -627,10 +629,10 @@ a {
 .main-news-min {
   width: 100%;
   height: 100%;
-  max-width: 29%;
   display: flex;
   flex-direction: column;
   gap: 1.7rem;
+  justify-content: space-between;
 }
 
 .main-news-min-item {
@@ -656,8 +658,8 @@ a {
   left: 0;
   bottom: 0.7rem;
   display: block;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: rgb(255, 255, 255);
   z-index: 2;
   font-weight: bold;
@@ -728,7 +730,7 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 .aside-btns button {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: left;
   position: relative;
   padding: 0.6rem;
@@ -786,7 +788,7 @@ a {
 .aside-content-item {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 0.8rem;
 }
 .aside-content-item:not(:last-child) {
   padding-bottom: 2rem;
@@ -802,22 +804,24 @@ a {
   color: rgb(255, 12, 0);
   font-size: 1.5rem;
   letter-spacing: 0.1em;
+  display: none;
+}
+.aside-content-item-title span {
+  display: none;
+}
+.aside-content-item-title h4:not(:last-child) {
+  display: none;
 }
 .aside-content-item-title h4,
 .aside-content-item-title span {
-  color: rgb(85, 85, 85);
+  color: black;
   font-size: 1.4rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .aside-content-item-info {
   font-size: 1.5rem;
   line-height: 1.77rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .aside-content-more {
@@ -910,7 +914,6 @@ a {
   flex-direction: column;
   gap: 2rem;
   height: 100%;
-  justify-content: space-between;
 }
 
 .sub-news-inner {
@@ -957,14 +960,13 @@ a {
 }
 
 .sub-news-left-content-item-date-content-info {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: rgb(36, 36, 36);
   line-height: 1.6rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+.sub-news-left-content-item-date-content-info.edit {
+  font-size: 1.75rem;
+  line-height: 1.7rem;
 }
 
 .sub-news {
@@ -982,7 +984,7 @@ a {
 .sub-news-right-top {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 .sub-news-right-top h2 {
   padding-bottom: 0.3rem;
@@ -1020,7 +1022,7 @@ a {
 .sub-news-right-bottom {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 .sub-news-right-bottom h2 {
   font-size: 2.4rem;
@@ -1113,8 +1115,15 @@ a {
 .trending-banner img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.trending-banner a {
+  max-width: unset;
+  max-height: 98%;
+  width: 100%;
+  height: 100%;
+  margin: auto 0 0 0;
 }
 
 .trending-head {
@@ -1171,17 +1180,20 @@ a {
 
 .trending-aside-content-head h3 {
   color: rgb(3, 159, 55);
+  font-size: 1.6rem;
 }
 .trending-aside-content-head h4,
 .trending-aside-content-head span {
   color: rgb(85, 85, 85);
   font-weight: normal;
+  font-size: 1.6rem;
 }
 
 .trending-main-content {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .trending-item {

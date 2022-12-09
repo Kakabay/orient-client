@@ -1,6 +1,10 @@
 .main-news-inner {
-  @include flex;
+  // @include flex;
   gap: 1.5rem;
+  //
+  display: grid;
+  grid-template-columns: 71% auto;
+  align-items: stretch;
 }
 
 .main-inner-content {
@@ -11,7 +15,7 @@
 
 .main-news-lead {
   width: 100%;
-  max-width: 71%;
+  // max-width: 71%;
   position: relative;
   @include flex;
   justify-content: flex-start;
@@ -69,7 +73,8 @@
 }
 
 .main-news-info-content {
-  font-size: 1.8rem;
+  // font-size: 1.8rem;
+  font-size: 2rem;
   color: $base-white;
   line-height: 2.179rem;
   font-weight: bold;
@@ -81,9 +86,12 @@
 
 .main-news-min {
   @include stretch;
-  max-width: 29%;
+  // max-width: 29%;
   @include flex(column);
   gap: 1.7rem;
+
+  //
+  justify-content: space-between;
 }
 
 .main-news-min-item {
@@ -100,8 +108,10 @@
   left: 0;
   bottom: 0.7rem;
   display: block;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  // font-size: 1.2rem;
+  font-size: 1.5rem;
+  // line-height: 1.6rem;
+  line-height: 2rem;
   color: $base-white;
   z-index: 2;
   font-weight: bold;
