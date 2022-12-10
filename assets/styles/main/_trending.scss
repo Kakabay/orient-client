@@ -110,6 +110,12 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width: 1070px) {
+  .trending {
+    padding-top: 0;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .trending-inner {
     @include flex(column-reverse);

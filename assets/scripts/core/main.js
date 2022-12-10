@@ -98,6 +98,7 @@ class AssignEvent {
   actionType;
   addedClass = "active";
   target = "self";
+  isActive = true;
   /**
    * ID or class of an HTML element
    * @param {string} identifier
@@ -119,7 +120,7 @@ class AssignEvent {
     this.target = target;
   }
 
-  listen() {
+  listen(customFunction) {
     const element = new Select(this.identifier).select();
     let target;
     if (this.target === "self") {
@@ -131,12 +132,18 @@ class AssignEvent {
       switch (this.actionType) {
         case "add":
           target.classList.add(this.addedClass);
+          customFunction ? customFunction(true) : null;
+          this.isActive = true;
           break;
         case "remove":
           target.classList.remove(this.addedClass);
+          customFunction ? customFunction(false) : null;
+          this.isActive = false;
           break;
         case "toggle":
           target.classList.toggle(this.addedClass);
+          customFunction ? customFunction(this.isActive) : null;
+          this.isActive = !this.isActive;
           break;
         default:
           throw new Error("Bad action type!");
@@ -230,3 +237,25 @@ const burgerAffichePair = new AssignEvent(
   "active",
   ".burger-affiche-items"
 ).listen();
+
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
+
+const mobileAside = new AssignEvent(
+  ".aside-mobile-open",
+  "click",
+  "toggle",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
+
+const mobileAsideCloser = new AssignEvent(
+  ".aside-mobile-out",
+  "click",
+  "remove",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);

@@ -1,0 +1,198 @@
+.aside-mobile {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  @include flex(column);
+  justify-content: flex-end;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+    .aside-mobile-open {
+      img {
+        @include transition-std;
+        transform: rotateX(0deg);
+      }
+    }
+
+    .aside-mobile-out {
+      opacity: 1;
+      pointer-events: all;
+      @include transition-std(0.6s);
+      height: 20%;
+    }
+    .aside-mobile-inner {
+      background: $base-white;
+      @include transition-std;
+      height: 80%;
+      &::after {
+        box-shadow: 0rem 0rem 0rem transparent;
+      }
+    }
+    .aside-mobile-items {
+      pointer-events: all;
+    }
+  }
+}
+
+.aside-mobile-out {
+  opacity: 0;
+  pointer-events: none;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.4);
+  @include transition-std;
+  transition: background 0.6s ease;
+}
+
+.aside-mobile-inner {
+  position: relative;
+  height: 10%;
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  background: $base-white;
+  @include grid(false, 2fr 8fr 1fr);
+  padding: 3rem;
+  @include transition-std;
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    display: block;
+    box-shadow: 1rem 0.3rem 2rem rgb(0 0 0 / 90%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+
+.aside-mobile-header {
+  padding: 1.5rem 0;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.aside-mobile-items {
+  padding-right: 1rem;
+  pointer-events: none;
+  max-height: 80vh;
+  overflow-y: auto;
+  @include flex(column);
+  a {
+    border-bottom: 0.1rem solid $invisible-gray;
+    padding: 1.5rem 0;
+    @include flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    color: $base-black;
+
+    &:hover {
+      @include transition-std;
+      border-color: $base-green;
+      .content {
+        @include transition-std;
+        color: $base-green;
+      }
+    }
+  }
+
+  .time {
+    font-size: 1.4rem;
+  }
+  .content {
+    font-size: 1.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $base-black;
+    @include transition-std;
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $invisible-gray;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $invisible-gray;
+  }
+}
+
+.aside-mobile-open {
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  z-index: 3;
+  cursor: pointer;
+  justify-self: flex-end;
+  align-self: flex-start;
+  @include flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    @include transition-std;
+    transform: rotateX(180deg);
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .aside-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .aside-mobile-out {
+    height: 80%;
+  }
+  .aside-mobile-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 1rem;
+    padding-top: 6rem;
+    height: 17%;
+  }
+  .aside-mobile-header {
+    display: none;
+  }
+  .aside-mobile-open {
+    z-index: 100;
+    height: 4rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .aside-mobile-items {
+    .content {
+      font-size: 1.5rem;
+    }
+    .time {
+      font-size: 1.3rem;
+    }
+  }
+}

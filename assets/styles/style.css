@@ -667,6 +667,9 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
+  .main-news-inner {
+    grid-template-columns: 1fr;
+  }
   .main-news-container {
     padding-right: 4rem;
   }
@@ -872,6 +875,7 @@ a {
 
 @media screen and (max-width: 1070px) {
   .aside {
+    display: none;
     max-width: unset;
   }
   .aside-ad-wrapper a {
@@ -1236,6 +1240,11 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width: 1070px) {
+  .trending {
+    padding-top: 0;
+  }
+}
 @media screen and (max-width: 950px) {
   .trending-inner {
     display: flex;
@@ -1537,6 +1546,194 @@ a {
   }
   .trending-item:nth-child(6), .trending-item:nth-child(7), .trending-item:nth-child(8) {
     display: none;
+  }
+}
+.aside-mobile {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.aside-mobile.active {
+  pointer-events: all;
+}
+.aside-mobile.active .aside-mobile-open img {
+  transition: 0.3s all ease;
+  transform: rotateX(0deg);
+}
+.aside-mobile.active .aside-mobile-out {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.6s all ease;
+  height: 20%;
+}
+.aside-mobile.active .aside-mobile-inner {
+  background: rgb(255, 255, 255);
+  transition: 0.3s all ease;
+  height: 80%;
+}
+.aside-mobile.active .aside-mobile-inner::after {
+  box-shadow: 0rem 0rem 0rem transparent;
+}
+.aside-mobile.active .aside-mobile-items {
+  pointer-events: all;
+}
+
+.aside-mobile-out {
+  opacity: 0;
+  pointer-events: none;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.3s all ease;
+  transition: background 0.6s ease;
+}
+
+.aside-mobile-inner {
+  position: relative;
+  height: 10%;
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 2fr 8fr 1fr;
+  padding: 3rem;
+  transition: 0.3s all ease;
+}
+.aside-mobile-inner::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  display: block;
+  box-shadow: 1rem 0.3rem 2rem rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.aside-mobile-header {
+  padding: 1.5rem 0;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.aside-mobile-items {
+  padding-right: 1rem;
+  pointer-events: none;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.aside-mobile-items a {
+  border-bottom: 0.1rem solid rgba(126, 126, 126, 0.5);
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  color: rgb(36, 36, 36);
+}
+.aside-mobile-items a:hover {
+  transition: 0.3s all ease;
+  border-color: rgb(3, 159, 55);
+}
+.aside-mobile-items a:hover .content {
+  transition: 0.3s all ease;
+  color: rgb(3, 159, 55);
+}
+.aside-mobile-items .time {
+  font-size: 1.4rem;
+}
+.aside-mobile-items .content {
+  font-size: 1.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(36, 36, 36);
+  transition: 0.3s all ease;
+}
+.aside-mobile-items::-webkit-scrollbar {
+  width: 0.3rem;
+}
+.aside-mobile-items ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.aside-mobile-items::-webkit-scrollbar-thumb {
+  background: rgba(126, 126, 126, 0.5);
+}
+.aside-mobile-items::-webkit-scrollbar-thumb:hover {
+  background: rgba(126, 126, 126, 0.5);
+}
+
+.aside-mobile-open {
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  z-index: 3;
+  cursor: pointer;
+  justify-self: flex-end;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.aside-mobile-open img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.3s all ease;
+  transform: rotateX(180deg);
+}
+
+@media screen and (min-width: 1070px) {
+  .aside-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .aside-mobile-out {
+    height: 80%;
+  }
+  .aside-mobile-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 1rem;
+    padding-top: 6rem;
+    height: 17%;
+  }
+  .aside-mobile-header {
+    display: none;
+  }
+  .aside-mobile-open {
+    z-index: 100;
+    height: 4rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .aside-mobile-items .content {
+    font-size: 1.5rem;
+  }
+  .aside-mobile-items .time {
+    font-size: 1.3rem;
   }
 }
 .footer {
