@@ -11,7 +11,9 @@
   // @include imgStyle(unset, unset, contain);
   @include imgStyle(unset, unset, cover);
   //
+  @include flex;
   a {
+    display: block;
     max-width: unset;
     max-height: 98%;
     width: 100%;
@@ -74,8 +76,10 @@
 
 .trending-main-content {
   // @include grid(false, 1fr);
-  gap: 3.5rem;
+  // gap: 3.5rem;
+  gap: 2.5rem;
   //
+  height: 100%;
   @include flex(column);
   justify-content: space-between;
 }

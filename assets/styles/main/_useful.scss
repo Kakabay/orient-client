@@ -39,7 +39,7 @@
 
 .useful-aside-content {
   @include flex(column);
-  gap: 3.5rem;
+  gap: 2.5rem;
 }
 
 .useful-aside {
@@ -48,8 +48,8 @@
 }
 
 .useful-main-content {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
 }
 
 // Media

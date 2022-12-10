@@ -1,7 +1,7 @@
 .footer {
   @include grid(false, 1fr);
-  min-height: 23.6rem;
   @include stretch;
+  padding: 3rem 0;
   background: $light-black;
 }
 
