@@ -225,3 +225,78 @@ const burgerAffichePair = new AssignEvent(
   "active",
   ".burger-affiche-items"
 ).listen();
+
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+// LATEST CHANGES =====================================================
+
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
+  }
+}
+
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
+
+const numeratedNavSectionList = new Numerator(
+  ".nav-section-span",
+  "nav-section-span"
+).numerate();
+
+const numeratedNavDropdownList = new Numerator(
+  ".nav-section-dropdown",
+  "nav-section-dropdown"
+).numerate();
+
+const nav = new Select(".nav").select();
+
+numeratedNavSectionList.forEach((element) => {
+  element.addEventListener("click", () => {
+    if (!element.classList.contains("active")) {
+      number = element.classList.toString().split("-").pop();
+      numeratedNavSectionList.forEach((element) =>
+        element.classList.remove("active")
+      );
+      numeratedNavDropdownList.forEach((element) =>
+        element.classList.remove("active")
+      );
+      element.classList.add("active");
+      numeratedNavDropdownList[number - 1].classList.add("active");
+    }
+  });
+});
