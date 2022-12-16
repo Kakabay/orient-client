@@ -168,6 +168,17 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
 
 // Swiper
 
+const mainNewsSwiper = new Swiper(".mainNewsSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  lazyLoading: true,
+  loop: true,
+  navigation: {
+    prevEl: ".main-news-prev",
+    nextEl: ".main-news-next",
+  },
+});
+
 const videoSwiper = new Swiper(".videoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,

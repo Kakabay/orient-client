@@ -121,7 +121,13 @@
 // Media
 @media screen and (max-width: 1070px) {
   .main-news-inner {
-    grid-template-columns: 1fr;
+    display: block;
+  }
+  .main-news-lead {
+    display: none;
+  }
+  .main-news-min {
+    display: none;
   }
   .main-news-container {
     padding-right: 4rem;
