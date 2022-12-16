@@ -118,8 +118,15 @@
   text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
+.mainNewsSwiper {
+  display: none;
+}
+
 // Media
 @media screen and (max-width: 1070px) {
+  .mainNewsSwiper {
+    display: block;
+  }
   .main-news-inner {
     display: block;
   }
