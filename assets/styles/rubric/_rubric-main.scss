@@ -6,7 +6,7 @@
 
 .rubric-items {
   padding: 0 6.7rem;
-  @include flex(column);
+  display: grid;
   gap: 8rem;
 }
 .rubric-item {

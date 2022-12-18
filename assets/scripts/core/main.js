@@ -10,8 +10,10 @@ class Select {
   constructor(classname) {
     this.classname = classname;
   }
-  select() {
-    return document.querySelector(this.classname);
+  select(all) {
+    return all
+      ? document.querySelectorAll(this.classname)
+      : document.querySelector(this.classname);
   }
 }
 
@@ -151,6 +153,23 @@ class AssignEvent {
     });
     return [element, target];
   }
+
+  // assign(customFunction){
+  //   const element = new Select(this.identifier).select();
+  //   switch (this.actionType) {
+  //     case "add":
+
+  //       break;
+  //     case "remove":
+
+  //       break;
+  //     case "toggle":
+
+  //       break;
+  //     default:
+  //       throw new Error("Bad action type!");
+  //   }
+  // }
 }
 
 // Year
@@ -196,6 +215,16 @@ const photoSwiper = new Swiper(".photoSwiper", {
   navigation: {
     prevEl: ".photo-prev",
     nextEl: ".photo-next",
+  },
+});
+
+const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    prevEl: ".photo-scroller-prev",
+    nextEl: ".photo-scroller-next",
   },
 });
 
@@ -269,4 +298,22 @@ const mobileAsideCloser = new AssignEvent(
   "remove",
   "active",
   ".aside-mobile"
+).listen(bodyScrollHandler);
+
+const photoItems = new Select(".photo-item").select(true);
+const photoScroller = new Select(".photo-scroller").select();
+
+photoItems.forEach((photoItem) => {
+  photoItem.addEventListener("click", () => {
+    photoScroller.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+const photoScrollerCloser = new AssignEvent(
+  ".photo-scroller-closer",
+  "click",
+  "remove",
+  "active",
+  ".photo-scroller"
 ).listen(bodyScrollHandler);

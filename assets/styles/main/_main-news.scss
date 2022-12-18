@@ -122,6 +122,76 @@
   display: none;
 }
 
+.photo-scroller {
+  overflow: hidden;
+  @include flex();
+  align-items: center;
+  grid-template-columns: 1fr;
+  align-items: center;
+  z-index: 10000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.7);
+  @include transition-std;
+  .photo-scroller-inner {
+    transform: scale(0.9);
+    @include transition-std;
+  }
+
+  &.active {
+    @include transition-std;
+    opacity: 1;
+    pointer-events: all;
+    .photo-scroller-inner {
+      transform: scale(1);
+      @include transition-std;
+    }
+  }
+}
+
+.photoScrollerSwiper {
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+
+  .swiper-slide {
+    @include flex;
+    justify-content: center;
+  }
+}
+.photo-scroller-inner {
+  position: relative;
+  padding: 2rem 5rem;
+  display: grid;
+}
+
+.photo-scroller-item {
+  @include imgStyle(70rem, 50rem);
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-scroller-closer {
+  transform: scale(1) !important;
+  position: absolute;
+  top: -25%;
+  right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.photo-scroller-next,
+.photo-scroller-prev {
+  top: 40% !important;
+}
+
 // Media
 @media screen and (max-width: 1070px) {
   .mainNewsSwiper {

@@ -719,6 +719,87 @@ a {
   display: none;
 }
 
+.photo-scroller {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-template-columns: 1fr;
+  align-items: center;
+  z-index: 10000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s all ease;
+}
+.photo-scroller .photo-scroller-inner {
+  transform: scale(0.9);
+  transition: 0.3s all ease;
+}
+.photo-scroller.active {
+  transition: 0.3s all ease;
+  opacity: 1;
+  pointer-events: all;
+}
+.photo-scroller.active .photo-scroller-inner {
+  transform: scale(1);
+  transition: 0.3s all ease;
+}
+
+.photoScrollerSwiper {
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+}
+.photoScrollerSwiper .swiper-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.photo-scroller-inner {
+  position: relative;
+  padding: 2rem 5rem;
+  display: grid;
+}
+
+.photo-scroller-item {
+  max-width: 70rem;
+  max-height: 50rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.photo-scroller-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo-scroller-closer {
+  transform: scale(1) !important;
+  position: absolute;
+  top: -25%;
+  right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.photo-scroller-next,
+.photo-scroller-prev {
+  top: 40% !important;
+}
+
 @media screen and (max-width: 1070px) {
   .mainNewsSwiper {
     display: block;
@@ -1896,8 +1977,7 @@ a {
 
 .rubric-items {
   padding: 0 6.7rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 8rem;
 }
 
