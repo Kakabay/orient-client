@@ -171,13 +171,15 @@
     height: 80%;
   }
   .aside-mobile-inner {
-    grid-template-columns: 1fr;
+    @include flex(column);
+
     padding: 4rem 1rem;
     padding-top: 6rem;
     height: 17%;
   }
   .aside-mobile-header {
-    display: none;
+    text-align: center;
+    font-size: 2.4rem;
   }
   .aside-mobile-open {
     z-index: 100;
