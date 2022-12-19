@@ -92,11 +92,13 @@
     height: 3.2rem;
   }
 }
-
-.partners {
+.partners-inner {
   @include flex(column);
   gap: 4.6rem;
+}
 
+.partners {
+  padding: 4rem 0;
   .swiper-slide {
     @include flex;
     justify-content: center;
@@ -119,7 +121,7 @@
 .partners-head {
   @include sectionTitle;
   text-align: center;
-  color: $base-white;
+  // color: $base-black;
 }
 
 .partner-prev,

@@ -13,8 +13,17 @@
   }
 }
 
+.bannerSwiper-1,
+.bannerSwiper-2 {
+  width: 50%;
+
+  .swiper-slide {
+    max-height: 15rem;
+  }
+}
+
 .banners-inner {
-  @include grid(false, 1fr 1fr);
+  @include flex;
   gap: 2.5rem;
   @include stretch;
 }
