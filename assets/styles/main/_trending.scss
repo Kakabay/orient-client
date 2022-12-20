@@ -3,7 +3,8 @@
 }
 
 .trending-inner {
-  @include grid(false, 1fr 1fr 1fr);
+  @include flex;
+
   gap: 3.6rem;
 }
 
@@ -11,6 +12,7 @@
   // @include imgStyle(unset, unset, contain);
   @include imgStyle(unset, unset, cover);
   //
+  width: 33%;
   @include flex;
   a {
     display: block;
@@ -48,6 +50,14 @@
   gap: 1.6rem;
 }
 
+.trending-banner {
+  .swiper-slide {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .trending-img {
   @include imgStyle($objFit: cover);
 }
@@ -61,9 +71,9 @@
 .trending-aside-content-head {
   h3 {
     display: none;
-    color: $base-green;
-    //
-    font-size: 1.6rem;
+    & + span {
+      display: none;
+    }
   }
 
   h4,
