@@ -1352,6 +1352,7 @@ a {
 }
 
 .trending-aside-content-head h3 {
+  display: none;
   color: rgb(3, 159, 55);
   font-size: 1.6rem;
 }
@@ -2187,6 +2188,10 @@ a {
 }
 
 .article-items {
+  display: none;
+}
+
+.sub-news-left-content-item:last-child {
   display: none;
 }
 

@@ -85,6 +85,10 @@
   display: none;
 }
 
+.sub-news-left-content-item:last-child {
+  display: none;
+}
+
 // Media
 @media screen and (max-width: 1080px) {
   .article-aside {
