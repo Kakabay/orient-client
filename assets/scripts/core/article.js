@@ -1,7 +1,3 @@
-/**
- * Query selector class
- * @usage const ITEM_NAME =  new Select(ITEM_CLASSNAME).select();
- */
 class Select {
   classname = "";
   /**
@@ -14,6 +10,45 @@ class Select {
     return document.querySelector(this.classname);
   }
 }
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
+  }
+}
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
 
 /**
  * News switcher button class
@@ -193,38 +228,24 @@ const burgerPair = new AssignEvent(
   "click",
   "add",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "hidden";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
 const burgerClosePair = new AssignEvent(
   ".burger-close",
   "click",
   "remove",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "auto";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
-const burgerNewsPair = new AssignEvent(
-  ".burger-news",
-  "click",
-  "toggle",
-  "active",
-  ".burger-news-items"
-).listen();
+const burgerListLi = new Numerator(".burger-list", "burger-list").numerate();
 
-const burgerAffichePair = new AssignEvent(
-  ".burger-affiche",
-  "click",
-  "toggle",
-  "active",
-  ".burger-affiche-items"
-).listen();
+burgerListLi.forEach((burgerLi) => {
+  burgerLi.addEventListener("click", () => {
+    burgerLi.classList.toggle("active");
+  });
+});
 
 // LATEST CHANGES =====================================================
 // LATEST CHANGES =====================================================
@@ -236,42 +257,6 @@ const burgerAffichePair = new AssignEvent(
 // LATEST CHANGES =====================================================
 // LATEST CHANGES =====================================================
 // LATEST CHANGES =====================================================
-
-class SelectAll extends Select {
-  super(className) {
-    this.classname = className;
-  }
-
-  select(all) {
-    if (all) {
-      return document.querySelectorAll(this.classname);
-    } else {
-      return document.querySelectors(this.classname);
-    }
-  }
-}
-
-class Numerator {
-  className;
-  givenClassName;
-
-  constructor(className, givenClassName) {
-    this.className = className;
-    this.givenClassName = givenClassName;
-  }
-
-  numerate() {
-    // try {
-    const elementNodeList = new SelectAll(this.className).select(true);
-    elementNodeList.forEach((element, index) => {
-      element.classList.add(`${this.givenClassName}-${index + 1}`);
-    });
-    return elementNodeList;
-    // } catch (_err) {
-    //   throw new Error("Bad classname!");
-    // }
-  }
-}
 
 const numeratedNavSectionList = new Numerator(
   ".nav-section-span",
@@ -300,3 +285,19 @@ numeratedNavSectionList.forEach((element) => {
     }
   });
 });
+
+const mobileAside = new AssignEvent(
+  ".aside-mobile-open",
+  "click",
+  "toggle",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
+
+const mobileAsideCloser = new AssignEvent(
+  ".aside-mobile-out",
+  "click",
+  "remove",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);

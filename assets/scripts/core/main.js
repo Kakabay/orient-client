@@ -1,7 +1,3 @@
-/**
- * Query selector class
- * @usage const ITEM_NAME =  new Select(ITEM_CLASSNAME).select();
- */
 class Select {
   classname = "";
   /**

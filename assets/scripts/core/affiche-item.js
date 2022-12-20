@@ -1,7 +1,3 @@
-/**
- * Query selector class
- * @usage const ITEM_NAME =  new Select(ITEM_CLASSNAME).select();
- */
 class Select {
   classname = "";
   /**
@@ -12,6 +8,24 @@ class Select {
   }
   select() {
     return document.querySelector(this.classname);
+  }
+}
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
   }
 }
 
@@ -91,6 +105,27 @@ class AssignYear {
     return year;
   }
 }
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
 
 class AssignEvent {
   identifier;
@@ -167,38 +202,24 @@ const burgerPair = new AssignEvent(
   "click",
   "add",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "hidden";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
 const burgerClosePair = new AssignEvent(
   ".burger-close",
   "click",
   "remove",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "auto";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
-const burgerNewsPair = new AssignEvent(
-  ".burger-news",
-  "click",
-  "toggle",
-  "active",
-  ".burger-news-items"
-).listen();
+const burgerListLi = new Numerator(".burger-list", "burger-list").numerate();
 
-const burgerAffichePair = new AssignEvent(
-  ".burger-affiche",
-  "click",
-  "toggle",
-  "active",
-  ".burger-affiche-items"
-).listen();
+burgerListLi.forEach((burgerLi) => {
+  burgerLi.addEventListener("click", () => {
+    burgerLi.classList.toggle("active");
+  });
+});
 
 const buttonLocal = new NewsBtn(".news-local").createBtn();
 const runBtns = new NewsBtn(".news-global").activateSwitch(
@@ -209,3 +230,19 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
     global: new Select(".aside-content.global").select(),
   }
 );
+
+const mobileAside = new AssignEvent(
+  ".aside-mobile-open",
+  "click",
+  "toggle",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
+
+const mobileAsideCloser = new AssignEvent(
+  ".aside-mobile-out",
+  "click",
+  "remove",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
