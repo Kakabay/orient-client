@@ -100,6 +100,7 @@
 
 .main-news-min-bg {
   @include imgStyle($objFit: cover);
+  max-height: 50rem;
 }
 
 .main-news-min-info {
