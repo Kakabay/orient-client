@@ -587,12 +587,7 @@ a {
      object-fit: cover;
 }
 
-.bannerSwiper-1,
-.bannerSwiper-2 {
-  width: 50%;
-}
-.bannerSwiper-1 .swiper-slide,
-.bannerSwiper-2 .swiper-slide {
+.bannerSwiper .swiper-slide {
   max-height: 15rem;
 }
 

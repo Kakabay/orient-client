@@ -261,20 +261,14 @@ const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   },
 });
 
-const bannerSwiper_1 = new Swiper(".bannerSwiper-1", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  effect: "fade",
-  centeredSlides: true,
+const bannerSwiper = new Swiper(".bannerSwiper", {
+  slidesPerView: 2,
+  spaceBetween: 25,
+  // effect: "fade",
   loop: true,
-});
-
-const bannerSwiper_2 = new Swiper(".bannerSwiper-2", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  effect: "fade",
-  centeredSlides: true,
-  loop: true,
+  autoplay: {
+    delay: "5000",
+  },
 });
 
 const partnerSwiper = new Swiper(".partnerSwiper", {
