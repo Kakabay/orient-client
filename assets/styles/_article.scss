@@ -11,7 +11,9 @@
 
 .article-item {
   @include imgStyle($objFit: cover);
-  max-height: 40rem;
+  @include flex;
+  align-items: center;
+  max-height: 55rem;
   overflow: hidden;
 }
 
