@@ -9,8 +9,8 @@
 }
 
 .trending-banner {
-  // @include imgStyle(unset, unset, contain);
-  @include imgStyle(unset, unset, cover);
+  @include imgStyle(unset, unset, contain);
+  // @include imgStyle(unset, unset, cover);
   //
   width: 33%;
   @include flex;
