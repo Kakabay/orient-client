@@ -390,4 +390,7 @@ const trendingSwiper = new Swiper(".trendingSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   centeredSlides: true,
+  autoplay: {
+    delay: "5000",
+  },
 });
