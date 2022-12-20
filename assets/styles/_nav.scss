@@ -20,7 +20,7 @@
   // @include flex;
   // justify-content: space-between;
   display: grid;
-  grid-template-columns: 68% auto;
+  grid-template-columns: 73% auto;
   gap: 4rem;
   align-items: center;
 }
@@ -111,7 +111,7 @@
 .nav-right {
   @include flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   gap: 5rem;
 }
 
@@ -123,6 +123,7 @@
   // color: $base-white;
   // max-width: 18.6rem;
   //
+  justify-self: flex-start;
   display: block;
   font-weight: bold;
   text-align: center;
@@ -135,8 +136,10 @@
 }
 
 .nav-lang {
+  width: 100%;
   @include flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
