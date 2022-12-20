@@ -311,21 +311,21 @@ const burgerClosePair = new AssignEvent(
   }
 ).listen();
 
-const burgerNewsPair = new AssignEvent(
-  ".burger-news",
-  "click",
-  "toggle",
-  "active",
-  ".burger-news-items"
-).listen();
+// const burgerNewsPair = new AssignEvent(
+//   ".burger-news",
+//   "click",
+//   "toggle",
+//   "active",
+//   ".burger-news-items"
+// ).listen();
 
-const burgerAffichePair = new AssignEvent(
-  ".burger-affiche",
-  "click",
-  "toggle",
-  "active",
-  ".burger-affiche-items"
-).listen();
+// const burgerAffichePair = new AssignEvent(
+//   ".burger-affiche",
+//   "click",
+//   "toggle",
+//   "active",
+//   ".burger-affiche-items"
+// ).listen();
 
 const bodyScrollHandler = (state) => {
   state
@@ -349,14 +349,6 @@ const mobileAsideCloser = new AssignEvent(
   ".aside-mobile"
 ).listen(bodyScrollHandler);
 
-const photoScrollerCloser = new AssignEvent(
-  ".photo-scroller-closer",
-  "click",
-  "remove",
-  "active",
-  ".photo-scroller"
-).listen(bodyScrollHandler);
-
 const photoList = new Numerator(".photo", "photo").numerate();
 const photoItemFolder = new Numerator(
   ".photo-item-folder",
@@ -378,4 +370,24 @@ photoList.forEach((photoItem, index) => {
     photoScroller.classList.add("active");
     document.body.style.overflow = "hidden";
   });
+});
+
+// Latest
+
+const photoScrollerContainer = new Select(".photo-scroller").select();
+
+photoScrollerContainer.addEventListener("click", (e) => {
+  if (
+    !e.target.classList.contains("photo-scroller-next") &&
+    !e.target.classList.contains("photo-scroller-prev")
+  ) {
+    photoScroller.classList.remove("active");
+    document.body.style.overflow = "visible";
+  }
+});
+
+const trendingSwiper = new Swiper(".trendingSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: true,
 });
