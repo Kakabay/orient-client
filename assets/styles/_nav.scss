@@ -284,8 +284,25 @@
   }
 }
 
-.burger-list {
+.burger-list,
+.burger-list-nested {
   @include flex(column);
+}
+
+.burger-list {
+  li {
+    font-size: 2rem;
+    color: $base-white;
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2rem 0;
+
+    a {
+      color: $base-white;
+    }
+  }
 }
 
 .burger-list-li {
