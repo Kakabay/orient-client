@@ -17,6 +17,19 @@ class Select {
   }
 }
 
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
+  }
+}
 /**
  * News switcher button class
  */
@@ -172,6 +185,28 @@ class AssignEvent {
   // }
 }
 
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
+
 // Year
 const displayedYear = new AssignYear("#year").assign();
 
@@ -211,7 +246,6 @@ const videoSwiper = new Swiper(".videoSwiper", {
 const photoSwiper = new Swiper(".photoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
-  loop: true,
   navigation: {
     prevEl: ".photo-prev",
     nextEl: ".photo-next",
@@ -221,7 +255,6 @@ const photoSwiper = new Swiper(".photoSwiper", {
 const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
-  loop: true,
   navigation: {
     prevEl: ".photo-scroller-prev",
     nextEl: ".photo-scroller-next",
@@ -316,16 +349,6 @@ const mobileAsideCloser = new AssignEvent(
   ".aside-mobile"
 ).listen(bodyScrollHandler);
 
-const photoItems = new Select(".photo-item").select(true);
-const photoScroller = new Select(".photo-scroller").select();
-
-photoItems.forEach((photoItem) => {
-  photoItem.addEventListener("click", () => {
-    photoScroller.classList.add("active");
-    document.body.style.overflow = "hidden";
-  });
-});
-
 const photoScrollerCloser = new AssignEvent(
   ".photo-scroller-closer",
   "click",
@@ -333,3 +356,26 @@ const photoScrollerCloser = new AssignEvent(
   "active",
   ".photo-scroller"
 ).listen(bodyScrollHandler);
+
+const photoList = new Numerator(".photo", "photo").numerate();
+const photoItemFolder = new Numerator(
+  ".photo-item-folder",
+  "photo-item-folder"
+).numerate();
+const photoScroller = new Select(".photo-scroller").select();
+const photoScrollerWrapper = new Select(
+  ".photo-scroller .swiper-wrapper"
+).select();
+
+const transferContent = (from, to) => {
+  to.innerHTML = from.innerHTML;
+  photoScrollerSwiper.setProgress(0, 200);
+};
+
+photoList.forEach((photoItem, index) => {
+  photoItem.addEventListener("click", () => {
+    transferContent(photoItemFolder[index], photoScrollerWrapper);
+    photoScroller.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});

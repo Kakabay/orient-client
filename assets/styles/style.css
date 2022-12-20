@@ -1631,6 +1631,10 @@ a {
   text-align: center;
 }
 
+.photo-item-folder {
+  display: none;
+}
+
 @media screen and (max-width: 950px) {
   .media {
     display: none;
