@@ -292,37 +292,6 @@
   @include flex(column);
 }
 
-.burger-list {
-  li {
-    font-size: 2rem;
-    color: $base-white;
-    text-align: center;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 2rem 0;
-
-    a {
-      color: $base-white;
-    }
-  }
-}
-
-.burger-list-li {
-  @include flex(column);
-
-  &.green {
-    align-items: center;
-    padding-top: 1.3rem;
-    .burger-item {
-      background: $base-green;
-      padding: 0.8rem;
-      max-width: 15rem;
-      width: 100%;
-    }
-  }
-}
-
 .burger-item {
   font-size: 2rem;
   color: $base-white;

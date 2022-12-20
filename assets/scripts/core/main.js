@@ -282,50 +282,38 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
   },
 });
 
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
+
 // Burger
 const burgerPair = new AssignEvent(
   ".header-burger",
   "click",
   "add",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "hidden";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
 const burgerClosePair = new AssignEvent(
   ".burger-close",
   "click",
   "remove",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "auto";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
+
+const burgerListLi = new Numerator(".burger-list", "burger-list").numerate();
+
+burgerListLi.forEach((burgerLi) => {
+  burgerLi.addEventListener("click", () => {
+    burgerLi.classList.toggle("active");
+  });
+});
 
 // const burgerNewsPair = new AssignEvent(
-//   ".burger-news",
-//   "click",
-//   "toggle",
-//   "active",
-//   ".burger-news-items"
-// ).listen();
-
-// const burgerAffichePair = new AssignEvent(
-//   ".burger-affiche",
-//   "click",
-//   "toggle",
-//   "active",
-//   ".burger-affiche-items"
-// ).listen();
-
-const bodyScrollHandler = (state) => {
-  state
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "visible");
-};
 
 const mobileAside = new AssignEvent(
   ".aside-mobile-open",

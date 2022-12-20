@@ -433,34 +433,6 @@ a {
   flex-direction: column;
 }
 
-.burger-list li {
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 2rem 0;
-}
-.burger-list li a {
-  color: rgb(255, 255, 255);
-}
-
-.burger-list-li {
-  display: flex;
-  flex-direction: column;
-}
-.burger-list-li.green {
-  align-items: center;
-  padding-top: 1.3rem;
-}
-.burger-list-li.green .burger-item {
-  background: rgb(3, 159, 55);
-  padding: 0.8rem;
-  max-width: 15rem;
-  width: 100%;
-}
-
 .burger-item {
   font-size: 2rem;
   color: rgb(255, 255, 255);
@@ -1913,6 +1885,50 @@ a {
      object-fit: contain;
   transition: 0.3s all ease;
   transform: rotateX(180deg);
+}
+
+.burger-list-ul li a {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.burger-list.active .burger-list-nested {
+  max-height: 30rem;
+  transition: 0.3s all ease;
+}
+
+.burger-list-nested {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s all ease;
+}
+.burger-list-nested li {
+  padding: 0;
+  width: 50%;
+}
+.burger-list-nested li a {
+  justify-self: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.5rem 0;
+  background: rgb(101, 101, 101);
+  transition: 0.3s all ease;
+}
+
+.burger-list-wrapper {
+  overflow-y: auto;
 }
 
 @media screen and (min-width: 1070px) {

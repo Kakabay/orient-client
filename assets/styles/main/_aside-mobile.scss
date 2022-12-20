@@ -160,6 +160,59 @@
   }
 }
 
+.burger-list-ul {
+  li {
+    a {
+      display: block;
+      width: 100%;
+      font-size: 2rem;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 2rem 0;
+    }
+  }
+}
+
+.burger-list {
+  &.active {
+    .burger-list-nested {
+      max-height: 30rem;
+      @include transition-std;
+    }
+  }
+}
+
+.burger-list-nested {
+  @include flex(column);
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  @include transition-std;
+
+  li {
+    padding: 0;
+    width: 50%;
+    a {
+      justify-self: center;
+      color: rgb(255, 255, 255);
+
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 1.5rem 0;
+      background: rgb(101, 101, 101);
+      @include transition-std;
+    }
+  }
+}
+
+.burger-list-wrapper {
+  overflow-y: auto;
+}
+
 @media screen and (min-width: 1070px) {
   .aside-mobile {
     display: none;
