@@ -85,11 +85,12 @@
   display: none;
 }
 
-.sub-news-left-content-item:last-child {
-  display: none;
-}
-
 // Media
+@media screen and (max-width: 1500px) {
+  .sub-news-left-content-item:last-child {
+    display: none;
+  }
+}
 @media screen and (max-width: 1080px) {
   .article-aside {
     display: none;
