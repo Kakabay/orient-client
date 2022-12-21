@@ -165,3 +165,44 @@ const mobileAsideCloser = new AssignEvent(
   "active",
   ".aside-mobile"
 ).listen(bodyScrollHandler);
+
+// Dang
+
+try {
+  const photoList = new Numerator(".photo", "photo").numerate();
+  const photoItemFolder = new Numerator(
+    ".photo-item-folder",
+    "photo-item-folder"
+  ).numerate();
+  const photoScroller = new Select(".photo-scroller").select();
+  const photoScrollerWrapper = new Select(
+    ".photo-scroller .swiper-wrapper"
+  ).select();
+
+  const transferContent = (from, to) => {
+    to.innerHTML = from.innerHTML;
+    photoScrollerSwiper.setProgress(0, 200);
+  };
+
+  photoList.forEach((photoItem, index) => {
+    photoItem.addEventListener("click", () => {
+      transferContent(photoItemFolder[index], photoScrollerWrapper);
+      photoScroller.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Latest
+
+  const photoScrollerContainer = new Select(".photo-scroller").select();
+
+  photoScrollerContainer.addEventListener("click", (e) => {
+    if (
+      !e.target.classList.contains("photo-scroller-next") &&
+      !e.target.classList.contains("photo-scroller-prev")
+    ) {
+      photoScroller.classList.remove("active");
+      document.body.style.overflow = "visible";
+    }
+  });
+} catch (_) {}
