@@ -267,6 +267,16 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
   },
 });
 
+const mainAdvertSwiper = new Swiper(".mainAdvertSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: "5000",
+  },
+});
+
 const partnerSwiper = new Swiper(".partnerSwiper", {
   slidesPerView: 5,
   spaceBetween: 60,
@@ -275,6 +285,27 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
   navigation: {
     prevEl: ".partner-prev",
     nextEl: ".partner-next",
+  },
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+
+    1050: {
+      spaceBetween: 60,
+      slidesPerView: 5,
+    },
   },
 });
 
