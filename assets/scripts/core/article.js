@@ -201,7 +201,6 @@ const articleSwiper = new Swiper(".articleSwiper", {
     delay: 3000,
     disableOnInteraction: false,
   },
-  loop: true,
   navigation: {
     prevEl: ".article-prev",
     nextEl: ".article-next",
