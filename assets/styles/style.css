@@ -1575,6 +1575,19 @@ a {
   transition: 0.3s all ease;
 }
 
+.media-photos .photo {
+  overflow: hidden;
+  cursor: pointer;
+}
+.media-photos .photo img {
+  transition: 0.3s all ease;
+  transform: scale(1);
+}
+.media-photos .photo img:hover {
+  transition: 0.3s all ease;
+  transform: scale(1.05);
+}
+
 .partners-item {
   max-width: 16.7rem;
   max-height: 8.7rem;

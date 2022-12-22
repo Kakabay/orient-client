@@ -110,6 +110,23 @@
   }
 }
 
+.media-photos {
+  .photo {
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      @include transition-std;
+      transform: scale(1);
+
+      &:hover {
+        @include transition-std;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
 .partners-item {
   @include imgStyle(16.7rem, 8.7rem, contain);
   transform: scale(0.8);
