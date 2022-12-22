@@ -38,6 +38,27 @@
 
 .rubric-bottom {
   padding: 0 6.7rem;
+  gap: 1rem;
+
+  span {
+    margin-left: 2rem;
+  }
+}
+
+.heading__footer-input {
+  max-width: 8rem;
+  height: 4rem;
+  input {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: #e6e6e6;
+    font-weight: 400;
+    color: #242424;
+  }
 }
 
 @media screen and (max-width: 1080px) {

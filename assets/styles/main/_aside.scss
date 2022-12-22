@@ -169,6 +169,10 @@
 
 .aside-ad-wrapper {
   @include imgStyle($objFit: cover);
+
+  a {
+    display: block;
+  }
 }
 
 .aside-container {

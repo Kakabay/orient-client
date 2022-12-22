@@ -20,7 +20,7 @@
   // @include flex;
   // justify-content: space-between;
   display: grid;
-  grid-template-columns: 68% auto;
+  grid-template-columns: 73% auto;
   gap: 4rem;
   align-items: center;
 }
@@ -111,7 +111,7 @@
 .nav-right {
   @include flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   gap: 5rem;
 }
 
@@ -123,6 +123,7 @@
   // color: $base-white;
   // max-width: 18.6rem;
   //
+  justify-self: flex-start;
   display: block;
   font-weight: bold;
   text-align: center;
@@ -135,8 +136,10 @@
 }
 
 .nav-lang {
+  width: 100%;
   @include flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
@@ -158,8 +161,7 @@
   left: 0;
   top: 0;
   z-index: 2;
-  padding: 1rem 3rem;
-  padding-right: 4rem;
+  // padding-right: 4rem;
   font-size: 1.5rem;
   color: $base-white;
   font-weight: bold;
@@ -168,6 +170,15 @@
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;
+  @include flex;
+  align-items: stretch;
+  justify-content: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 
 .ticker {
@@ -276,23 +287,9 @@
   }
 }
 
-.burger-list {
+.burger-list,
+.burger-list-nested {
   @include flex(column);
-}
-
-.burger-list-li {
-  @include flex(column);
-
-  &.green {
-    align-items: center;
-    padding-top: 1.3rem;
-    .burger-item {
-      background: $base-green;
-      padding: 0.8rem;
-      max-width: 15rem;
-      width: 100%;
-    }
-  }
 }
 
 .burger-item {
@@ -359,6 +356,13 @@
         height: 3rem;
       }
     }
+  }
+}
+
+.lang-country {
+  img {
+    width: 2.5rem;
+    height: 1.7rem;
   }
 }
 

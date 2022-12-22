@@ -10,6 +10,45 @@ class Select {
     return document.querySelector(this.classname);
   }
 }
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
+  }
+}
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
 class AssignYear {
   element;
   /**
@@ -92,35 +131,78 @@ const burgerPair = new AssignEvent(
   "click",
   "add",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "hidden";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
 const burgerClosePair = new AssignEvent(
   ".burger-close",
   "click",
   "remove",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "auto";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
-const burgerNewsPair = new AssignEvent(
-  ".burger-news",
+const burgerListLi = new Numerator(".burger-list", "burger-list").numerate();
+
+burgerListLi.forEach((burgerLi) => {
+  burgerLi.addEventListener("click", () => {
+    burgerLi.classList.toggle("active");
+  });
+});
+
+const mobileAside = new AssignEvent(
+  ".aside-mobile-open",
   "click",
   "toggle",
   "active",
-  ".burger-news-items"
-).listen();
+  ".aside-mobile"
+).listen(bodyScrollHandler);
 
-const burgerAffichePair = new AssignEvent(
-  ".burger-affiche",
+const mobileAsideCloser = new AssignEvent(
+  ".aside-mobile-out",
   "click",
-  "toggle",
+  "remove",
   "active",
-  ".burger-affiche-items"
-).listen();
+  ".aside-mobile"
+).listen(bodyScrollHandler);
+
+// Dang
+
+try {
+  const photoList = new Numerator(".photo", "photo").numerate();
+  const photoItemFolder = new Numerator(
+    ".photo-item-folder",
+    "photo-item-folder"
+  ).numerate();
+  const photoScroller = new Select(".photo-scroller").select();
+  const photoScrollerWrapper = new Select(
+    ".photo-scroller .swiper-wrapper"
+  ).select();
+
+  const transferContent = (from, to) => {
+    to.innerHTML = from.innerHTML;
+    photoScrollerSwiper.setProgress(0, 200);
+  };
+
+  photoList.forEach((photoItem, index) => {
+    photoItem.addEventListener("click", () => {
+      transferContent(photoItemFolder[index], photoScrollerWrapper);
+      photoScroller.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Latest
+
+  const photoScrollerContainer = new Select(".photo-scroller").select();
+
+  photoScrollerContainer.addEventListener("click", (e) => {
+    if (
+      !e.target.classList.contains("photo-scroller-next") &&
+      !e.target.classList.contains("photo-scroller-prev")
+    ) {
+      photoScroller.classList.remove("active");
+      document.body.style.overflow = "visible";
+    }
+  });
+} catch (_) {}

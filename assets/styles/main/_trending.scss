@@ -3,24 +3,32 @@
 }
 
 .trending-inner {
-  @include grid(false, 1fr 1fr 1fr);
+  @include flex;
+
   gap: 3.6rem;
 }
 
 .trending-banner {
-  // @include imgStyle(unset, unset, contain);
-  @include imgStyle(unset, unset, cover);
+  @include imgStyle(unset, unset, contain);
+  // @include imgStyle(unset, unset, cover);
   //
+
+  width: 33%;
   @include flex;
   a {
     display: block;
     max-width: unset;
-    max-height: 98%;
-    width: 100%;
+    max-height: 95%;
+    width: 95%;
     height: 100%;
     margin: auto 0 0 0;
   }
+  height: unset;
   //
+}
+
+.trendingSwiper {
+  width: 100%;
 }
 
 .trending-head {
@@ -48,6 +56,14 @@
   gap: 1.6rem;
 }
 
+.trending-banner {
+  .swiper-slide {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .trending-img {
   @include imgStyle($objFit: cover);
 }
@@ -60,9 +76,10 @@
 
 .trending-aside-content-head {
   h3 {
-    color: $base-green;
-    //
-    font-size: 1.6rem;
+    display: none;
+    & + span {
+      display: none;
+    }
   }
 
   h4,
@@ -102,6 +119,13 @@
 }
 
 // Media
+@media screen and (max-width: 1500px) {
+  .trending-item {
+    &:last-child {
+      display: none;
+    }
+  }
+}
 @media screen and (max-width: 1150px) {
   .trending-banner {
     display: none;

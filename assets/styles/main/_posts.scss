@@ -11,6 +11,16 @@
   display: grid;
   grid-template-areas: "big big sm1 sm2" "big big sm3 sm4" "sm5 sm6 sm7 sm8";
   gap: 2.5rem;
+
+  .trending-aside-content-head {
+    h3 {
+      display: block;
+
+      & + span {
+        display: block;
+      }
+    }
+  }
 }
 
 .posts-item {
@@ -49,7 +59,7 @@
 }
 
 // Media
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1100px) {
   .posts-item.big {
     grid-area: none;
     @include stretch;

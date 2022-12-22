@@ -46,6 +46,8 @@
 
   input {
     @include input;
+    color: black;
+    border: 0.1rem solid black;
     padding: 1rem 0.6rem;
     width: 100%;
     font-weight: bold;

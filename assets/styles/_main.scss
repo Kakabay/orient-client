@@ -13,14 +13,20 @@
   }
 }
 
+.bannerSwiper {
+  .swiper-slide {
+    max-height: 15rem;
+  }
+}
+
 .banners-inner {
-  @include grid(false, 1fr 1fr);
+  @include flex;
   gap: 2.5rem;
   @include stretch;
 }
 
 .banner {
-  @include imgStyle($objFit: cover);
+  @include imgStyle($objFit: contain);
 }
 
 // Media

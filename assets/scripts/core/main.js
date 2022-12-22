@@ -1,7 +1,3 @@
-/**
- * Query selector class
- * @usage const ITEM_NAME =  new Select(ITEM_CLASSNAME).select();
- */
 class Select {
   classname = "";
   /**
@@ -17,6 +13,19 @@ class Select {
   }
 }
 
+class SelectAll extends Select {
+  super(className) {
+    this.classname = className;
+  }
+
+  select(all) {
+    if (all) {
+      return document.querySelectorAll(this.classname);
+    } else {
+      return document.querySelectors(this.classname);
+    }
+  }
+}
 /**
  * News switcher button class
  */
@@ -172,6 +181,28 @@ class AssignEvent {
   // }
 }
 
+class Numerator {
+  className;
+  givenClassName;
+
+  constructor(className, givenClassName) {
+    this.className = className;
+    this.givenClassName = givenClassName;
+  }
+
+  numerate() {
+    // try {
+    const elementNodeList = new SelectAll(this.className).select(true);
+    elementNodeList.forEach((element, index) => {
+      element.classList.add(`${this.givenClassName}-${index + 1}`);
+    });
+    return elementNodeList;
+    // } catch (_err) {
+    //   throw new Error("Bad classname!");
+    // }
+  }
+}
+
 // Year
 const displayedYear = new AssignYear("#year").assign();
 
@@ -211,7 +242,6 @@ const videoSwiper = new Swiper(".videoSwiper", {
 const photoSwiper = new Swiper(".photoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
-  loop: true,
   navigation: {
     prevEl: ".photo-prev",
     nextEl: ".photo-next",
@@ -221,10 +251,29 @@ const photoSwiper = new Swiper(".photoSwiper", {
 const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
-  loop: true,
   navigation: {
     prevEl: ".photo-scroller-prev",
     nextEl: ".photo-scroller-next",
+  },
+});
+
+const bannerSwiper = new Swiper(".bannerSwiper", {
+  slidesPerView: 2,
+  spaceBetween: 25,
+  // effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: "5000",
+  },
+});
+
+const mainAdvertSwiper = new Swiper(".mainAdvertSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: "5000",
   },
 });
 
@@ -237,7 +286,34 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
     prevEl: ".partner-prev",
     nextEl: ".partner-next",
   },
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+
+    1050: {
+      spaceBetween: 60,
+      slidesPerView: 5,
+    },
+  },
 });
+
+const bodyScrollHandler = (state) => {
+  state
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+};
 
 // Burger
 const burgerPair = new AssignEvent(
@@ -245,44 +321,26 @@ const burgerPair = new AssignEvent(
   "click",
   "add",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "hidden";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
 const burgerClosePair = new AssignEvent(
   ".burger-close",
   "click",
   "remove",
   "active",
-  ".burger-wrapper",
-  () => {
-    document.body.style.overflowY = "auto";
-  }
-).listen();
+  ".burger-wrapper"
+).listen(bodyScrollHandler);
 
-const burgerNewsPair = new AssignEvent(
-  ".burger-news",
-  "click",
-  "toggle",
-  "active",
-  ".burger-news-items"
-).listen();
+const burgerListLi = new Numerator(".burger-list", "burger-list").numerate();
 
-const burgerAffichePair = new AssignEvent(
-  ".burger-affiche",
-  "click",
-  "toggle",
-  "active",
-  ".burger-affiche-items"
-).listen();
+burgerListLi.forEach((burgerLi) => {
+  burgerLi.addEventListener("click", () => {
+    burgerLi.classList.toggle("active");
+  });
+});
 
-const bodyScrollHandler = (state) => {
-  state
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "visible");
-};
+// const burgerNewsPair = new AssignEvent(
 
 const mobileAside = new AssignEvent(
   ".aside-mobile-open",
@@ -300,20 +358,48 @@ const mobileAsideCloser = new AssignEvent(
   ".aside-mobile"
 ).listen(bodyScrollHandler);
 
-const photoItems = new Select(".photo-item").select(true);
+const photoList = new Numerator(".photo", "photo").numerate();
+const photoItemFolder = new Numerator(
+  ".photo-item-folder",
+  "photo-item-folder"
+).numerate();
 const photoScroller = new Select(".photo-scroller").select();
+const photoScrollerWrapper = new Select(
+  ".photo-scroller .swiper-wrapper"
+).select();
 
-photoItems.forEach((photoItem) => {
+const transferContent = (from, to) => {
+  to.innerHTML = from.innerHTML;
+  photoScrollerSwiper.setProgress(0, 200);
+};
+
+photoList.forEach((photoItem, index) => {
   photoItem.addEventListener("click", () => {
+    transferContent(photoItemFolder[index], photoScrollerWrapper);
     photoScroller.classList.add("active");
     document.body.style.overflow = "hidden";
   });
 });
 
-const photoScrollerCloser = new AssignEvent(
-  ".photo-scroller-closer",
-  "click",
-  "remove",
-  "active",
-  ".photo-scroller"
-).listen(bodyScrollHandler);
+// Latest
+
+const photoScrollerContainer = new Select(".photo-scroller").select();
+
+photoScrollerContainer.addEventListener("click", (e) => {
+  if (
+    !e.target.classList.contains("photo-scroller-next") &&
+    !e.target.classList.contains("photo-scroller-prev")
+  ) {
+    photoScroller.classList.remove("active");
+    document.body.style.overflow = "visible";
+  }
+});
+
+const trendingSwiper = new Swiper(".trendingSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: true,
+  autoplay: {
+    delay: "5000",
+  },
+});
