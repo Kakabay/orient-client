@@ -168,6 +168,15 @@ const mobileAsideCloser = new AssignEvent(
 
 // Dang
 
+const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    prevEl: ".photo-scroller-prev",
+    nextEl: ".photo-scroller-next",
+  },
+});
+
 try {
   const photoList = new Numerator(".photo", "photo").numerate();
   const photoItemFolder = new Numerator(
