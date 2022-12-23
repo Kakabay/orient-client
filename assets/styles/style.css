@@ -299,12 +299,13 @@ a {
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  max-width: 12rem;
+  max-width: 13rem;
   width: 100%;
   height: 100%;
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1325,12 +1326,23 @@ a {
   gap: 2.5rem;
 }
 
+.trending-aside {
+  width: 36%;
+}
+
+.trending-main {
+  width: 36%;
+}
+
 .trending-aside-item {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
 
+.trending-banner {
+  width: 28%;
+}
 .trending-banner .swiper-slide {
   display: flex;
   flex-direction: row;

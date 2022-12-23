@@ -51,12 +51,21 @@
   gap: 2.5rem;
 }
 
+.trending-aside {
+  width: 36%;
+}
+
+.trending-main {
+  width: 36%;
+}
+
 .trending-aside-item {
   @include flex(column);
   gap: 1.6rem;
 }
 
 .trending-banner {
+  width: 28%;
   .swiper-slide {
     @include flex;
     align-items: center;
