@@ -140,6 +140,10 @@
   .trending-banner {
     display: none;
   }
+  .trending-aside,
+  .trending-main {
+    width: 100%;
+  }
   .trending-inner {
     grid-template-columns: 1fr 1fr;
   }
