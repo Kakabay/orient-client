@@ -178,6 +178,7 @@
 .aside-banner {
   max-width: 30rem;
   width: 100%;
+  @include imgStyle(unset, unset, contain);
 }
 
 .aside-container {

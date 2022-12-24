@@ -1036,6 +1036,16 @@ a {
 .aside-banner {
   max-width: 30rem;
   width: 100%;
+  max-width: unset;
+  max-height: unset;
+  width: 100%;
+  height: 100%;
+}
+.aside-banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .aside-container {
