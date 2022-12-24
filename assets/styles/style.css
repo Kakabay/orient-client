@@ -1047,6 +1047,9 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.aside-banner a {
+  display: block;
+}
 
 .aside-container {
   width: 100%;
