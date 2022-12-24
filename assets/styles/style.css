@@ -299,12 +299,13 @@ a {
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  max-width: 12rem;
+  max-width: 13rem;
   width: 100%;
   height: 100%;
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1328,12 +1329,23 @@ a {
   gap: 2.5rem;
 }
 
+.trending-aside {
+  width: 36%;
+}
+
+.trending-main {
+  width: 36%;
+}
+
 .trending-aside-item {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
 
+.trending-banner {
+  width: 28%;
+}
 .trending-banner .swiper-slide {
   display: flex;
   flex-direction: row;
@@ -1408,7 +1420,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1500px) {
@@ -1419,6 +1431,10 @@ a {
 @media screen and (max-width: 1150px) {
   .trending-banner {
     display: none;
+  }
+  .trending-aside,
+.trending-main {
+    width: 100%;
   }
   .trending-inner {
     grid-template-columns: 1fr 1fr;
@@ -1627,6 +1643,19 @@ a {
   transition: 0.3s all ease;
 }
 
+.media-photos .photo {
+  overflow: hidden;
+  cursor: pointer;
+}
+.media-photos .photo img {
+  transition: 0.3s all ease;
+  transform: scale(1);
+}
+.media-photos .photo img:hover {
+  transition: 0.3s all ease;
+  transform: scale(1.05);
+}
+
 .partners-item {
   max-width: 16.7rem;
   max-height: 8.7rem;
@@ -1716,6 +1745,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+.useful-main {
+  width: 100%;
 }
 
 .useful-main-content {

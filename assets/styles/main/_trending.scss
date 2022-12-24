@@ -51,12 +51,21 @@
   gap: 2.5rem;
 }
 
+.trending-aside {
+  width: 36%;
+}
+
+.trending-main {
+  width: 36%;
+}
+
 .trending-aside-item {
   @include flex(column);
   gap: 1.6rem;
 }
 
 .trending-banner {
+  width: 28%;
   .swiper-slide {
     @include flex;
     align-items: center;
@@ -115,7 +124,8 @@
   @include stretch;
   @include flex(column);
   gap: 0.4rem;
-  justify-content: flex-end;
+  // justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 // Media
@@ -129,6 +139,10 @@
 @media screen and (max-width: 1150px) {
   .trending-banner {
     display: none;
+  }
+  .trending-aside,
+  .trending-main {
+    width: 100%;
   }
   .trending-inner {
     grid-template-columns: 1fr 1fr;
