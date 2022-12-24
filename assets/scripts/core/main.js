@@ -257,10 +257,20 @@ const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   },
 });
 
-const bannerSwiper = new Swiper(".bannerSwiper", {
-  slidesPerView: 2,
-  spaceBetween: 25,
-  // effect: "fade",
+const bannerSwiper_1 = new Swiper(".bannerSwiper-1", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: "5000",
+  },
+});
+
+const bannerSwiper_2 = new Swiper(".bannerSwiper-2", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
   loop: true,
   autoplay: {
     delay: "5000",

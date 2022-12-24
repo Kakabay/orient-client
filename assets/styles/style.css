@@ -570,6 +570,9 @@ a {
   width: 100%;
   height: 100%;
 }
+.banners-inner .swiper {
+  width: 50%;
+}
 
 .banner {
   max-width: unset;
