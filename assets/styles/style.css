@@ -1033,6 +1033,11 @@ a {
   display: block;
 }
 
+.aside-banner {
+  max-width: 30rem;
+  width: 100%;
+}
+
 .aside-container {
   width: 100%;
   padding: 0 4rem 0 0;
