@@ -23,6 +23,10 @@
   @include flex;
   gap: 2.5rem;
   @include stretch;
+
+  .swiper {
+    width: 50%;
+  }
 }
 
 .banner {

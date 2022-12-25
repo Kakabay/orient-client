@@ -197,10 +197,7 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
 const articleSwiper = new Swiper(".articleSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  loop: false,
   navigation: {
     prevEl: ".article-prev",
     nextEl: ".article-next",
@@ -210,6 +207,7 @@ const articleSwiper = new Swiper(".articleSwiper", {
 const articleBottomSwiper = new Swiper(".articleBottomSwiper", {
   slidesPerView: 2,
   spaceBetween: 50,
+  loop: false,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
