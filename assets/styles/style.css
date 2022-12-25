@@ -1526,6 +1526,10 @@ a {
   display: block;
 }
 
+.posts-item-slider {
+  display: none;
+}
+
 .posts-item.sm .trending-img {
   overflow: hidden;
 }
@@ -1558,6 +1562,9 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
+  .posts-item-slider {
+    display: block;
+  }
   .posts-item.big {
     grid-area: none;
     width: 100%;
