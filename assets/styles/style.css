@@ -709,7 +709,6 @@ a {
   max-height: unset;
   width: 100%;
   height: 100%;
-  height: 40rem;
 }
 .main-news-min-bg img {
   width: 100%;
@@ -768,6 +767,10 @@ a {
   transition: 0.3s all ease;
 }
 
+.mainAdvertSwiper .swiper-slide {
+  height: 17rem;
+}
+
 .photoScrollerSwiper {
   width: 100%;
   height: 100%;
@@ -822,6 +825,9 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
+  .main-news-min-bg {
+    height: 40rem;
+  }
   .mainNewsSwiper {
     display: block;
   }
@@ -1059,6 +1065,11 @@ a {
   max-width: unset;
 }
 
+@media screen and (max-width: 1350px) {
+  .aside-banner {
+    max-width: 22rem;
+  }
+}
 @media screen and (max-width: 1070px) {
   .aside {
     display: none;
