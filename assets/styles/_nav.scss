@@ -158,14 +158,15 @@
 
 .marquee-title {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -0.1rem;
+  top: -0.1rem;
   z-index: 2;
   font-size: 1.5rem;
   color: $base-white;
   font-weight: bold;
   max-width: 13rem;
   @include stretch;
+  height: 4.4rem;
   background-image: url(../icons/marquee.svg);
   background-repeat: no-repeat;
   background-position: 0% center;

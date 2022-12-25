@@ -100,7 +100,7 @@
 
 .main-news-min-bg {
   @include imgStyle($objFit: cover);
-  max-height: 40rem;
+  height: 40rem;
 }
 
 .main-news-min-info {
@@ -237,5 +237,11 @@
   }
   .main-inner-content {
     gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-news-min-bg {
+    height: 30rem;
   }
 }
