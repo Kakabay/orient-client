@@ -1566,13 +1566,10 @@ a {
     display: block;
   }
   .posts-item.big {
-    grid-area: none;
-    width: 100%;
-    height: 100%;
+    display: none;
   }
   .posts-content {
-    display: flex;
-    flex-direction: row;
+    display: block;
   }
   .posts-item.sm {
     display: none;

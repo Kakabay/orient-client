@@ -68,11 +68,10 @@
     display: block;
   }
   .posts-item.big {
-    grid-area: none;
-    @include stretch;
+    display: none;
   }
   .posts-content {
-    @include flex;
+    display: block;
   }
   .posts-item.sm {
     display: none;
