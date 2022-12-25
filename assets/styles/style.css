@@ -339,6 +339,20 @@ a {
   padding: 1.1rem 0;
 }
 
+.marquee2k {
+  overflow: hidden;
+  width: 100%;
+  height: 4.2rem;
+}
+.marquee2k p {
+  padding: 1.1rem 0;
+}
+.marquee2k p a {
+  margin-left: 2.4rem;
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+}
+
 .nav-bottom-inner {
   overflow-x: auto;
   background: rgb(3, 159, 55);
@@ -710,7 +724,6 @@ a {
   max-height: unset;
   width: 100%;
   height: 100%;
-  height: 40rem;
 }
 .main-news-min-bg img {
   width: 100%;
@@ -769,6 +782,10 @@ a {
   transition: 0.3s all ease;
 }
 
+.mainAdvertSwiper .swiper-slide {
+  height: 17rem;
+}
+
 .photoScrollerSwiper {
   width: 100%;
   height: 100%;
@@ -823,6 +840,9 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
+  .main-news-min-bg {
+    height: 40rem;
+  }
   .mainNewsSwiper {
     display: block;
   }
@@ -1060,6 +1080,11 @@ a {
   max-width: unset;
 }
 
+@media screen and (max-width: 1350px) {
+  .aside-banner {
+    max-width: 22rem;
+  }
+}
 @media screen and (max-width: 1070px) {
   .aside {
     display: none;
@@ -1502,6 +1527,10 @@ a {
   display: block;
 }
 
+.posts-item-slider {
+  display: none;
+}
+
 .posts-item.sm .trending-img {
   overflow: hidden;
 }
@@ -1534,14 +1563,14 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
+  .posts-item-slider {
+    display: block;
+  }
   .posts-item.big {
-    grid-area: none;
-    width: 100%;
-    height: 100%;
+    display: none;
   }
   .posts-content {
-    display: flex;
-    flex-direction: row;
+    display: block;
   }
   .posts-item.sm {
     display: none;

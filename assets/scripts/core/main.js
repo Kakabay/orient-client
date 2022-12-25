@@ -412,3 +412,7 @@ const trendingSwiper = new Swiper(".trendingSwiper", {
     delay: "5000",
   },
 });
+
+Marquee3k.init({
+  selector: "marquee2k",
+});

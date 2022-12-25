@@ -100,7 +100,7 @@
 
 .main-news-min-bg {
   @include imgStyle($objFit: cover);
-  height: 40rem;
+  // height: 40rem;
 }
 
 .main-news-min-info {
@@ -155,6 +155,12 @@
   }
 }
 
+.mainAdvertSwiper {
+  .swiper-slide {
+    height: 17rem;
+  }
+}
+
 .photoScrollerSwiper {
   width: 100%;
   height: 100%;
@@ -198,6 +204,9 @@
 
 // Media
 @media screen and (max-width: 1070px) {
+  .main-news-min-bg {
+    height: 40rem;
+  }
   .mainNewsSwiper {
     display: block;
   }

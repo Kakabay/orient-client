@@ -23,6 +23,10 @@
   }
 }
 
+.posts-item-slider {
+  display: none;
+}
+
 .posts-item {
   &.sm {
     .trending-img {
@@ -60,12 +64,14 @@
 
 // Media
 @media screen and (max-width: 1100px) {
+  .posts-item-slider {
+    display: block;
+  }
   .posts-item.big {
-    grid-area: none;
-    @include stretch;
+    display: none;
   }
   .posts-content {
-    @include flex;
+    display: block;
   }
   .posts-item.sm {
     display: none;

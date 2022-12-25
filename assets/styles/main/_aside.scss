@@ -197,6 +197,11 @@
 }
 
 // Media
+@media screen and (max-width: 1350px) {
+  .aside-banner {
+    max-width: 22rem;
+  }
+}
 @media screen and (max-width: 1070px) {
   .aside {
     display: none;
