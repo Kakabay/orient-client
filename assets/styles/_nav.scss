@@ -202,6 +202,21 @@
   }
 }
 
+.marquee2k {
+  overflow: hidden;
+  width: 100%;
+  height: 4.2rem;
+
+  p {
+    padding: 1.1rem 0;
+    a {
+      margin-left: 2.4rem;
+      font-size: 1.7rem;
+      color: $base-white;
+    }
+  }
+}
+
 .nav-bottom-inner {
   overflow-x: auto;
   background: $base-green;
