@@ -10,6 +10,7 @@
   a {
     display: block;
     @include imgStyle($objFit: cover);
+    max-height: 12rem;
   }
 }
 

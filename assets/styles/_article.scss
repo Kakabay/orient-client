@@ -126,9 +126,9 @@
 }
 
 @media screen and (max-width: 700px) {
-  .article-swiper-wrapper-lower {
-    display: none;
-  }
+  // .article-swiper-wrapper-lower {
+  //   display: none;
+  // }
   .article-items {
     @include flex(column);
     gap: 2.5rem;
