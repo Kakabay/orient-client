@@ -205,8 +205,8 @@ const articleSwiper = new Swiper(".articleSwiper", {
 });
 
 const articleBottomSwiper = new Swiper(".articleBottomSwiper", {
-  slidesPerView: 2,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  spaceBetween: 0,
   loop: false,
   autoplay: {
     delay: 3000,
@@ -216,6 +216,13 @@ const articleBottomSwiper = new Swiper(".articleBottomSwiper", {
   navigation: {
     prevEl: ".article-bottom-prev",
     nextEl: ".article-bottom-next",
+  },
+
+  breakpoints: {
+    690: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
   },
 });
 
