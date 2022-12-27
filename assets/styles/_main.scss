@@ -10,7 +10,6 @@
   a {
     display: block;
     @include imgStyle($objFit: cover);
-    max-height: 12rem;
   }
 }
 
@@ -34,6 +33,57 @@
   @include imgStyle($objFit: contain);
 }
 
+// Mobile search
+.mobile-search {
+  position: fixed;
+  background: $base-white;
+  top: 0;
+  left: 0;
+  @include stretch;
+  z-index: 5001;
+  transform: translateY(-100%);
+  @include transition-std;
+
+  &.active {
+    transform: translateY(0%);
+    @include transition-std;
+  }
+}
+
+.mobile-search-inner {
+  position: relative;
+  padding: 6rem 1.6rem;
+  @include flex(column);
+  gap: 3rem;
+  align-items: center;
+}
+.mobile-search-logo {
+  @include imgStyle($objFit: fill);
+  width: 11.6rem;
+  height: 6rem;
+}
+
+.mobile-search-block {
+  @include flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 65%;
+  input {
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    @include stretch;
+    @include input;
+    border-color: black;
+  }
+}
+
+.mobile-search-closer {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  padding: 2rem;
+}
+
 // Media
 
 @media screen and (max-width: 950px) {
@@ -48,6 +98,13 @@
   }
   .banners-inner {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-advert {
+    a {
+      max-height: 13rem;
+    }
   }
 }
 

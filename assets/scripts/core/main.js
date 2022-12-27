@@ -416,3 +416,21 @@ const trendingSwiper = new Swiper(".trendingSwiper", {
 Marquee3k.init({
   selector: "marquee2k",
 });
+
+// Mobile search
+
+const mobileSearch = new AssignEvent(
+  ".header-search-icon",
+  "click",
+  "add",
+  "active",
+  ".mobile-search"
+).listen(bodyScrollHandler);
+
+const mobileSearchCloser = new AssignEvent(
+  ".mobile-search-closer",
+  "click",
+  "remove",
+  "active",
+  ".mobile-search"
+).listen(bodyScrollHandler);
