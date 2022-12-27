@@ -190,3 +190,22 @@ photoList.forEach((photoItem, index) => {
     document.body.style.overflow = "hidden";
   });
 });
+
+// Mobile search
+try {
+  const mobileSearch = new AssignEvent(
+    ".header-search-icon",
+    "click",
+    "add",
+    "active",
+    ".mobile-search"
+  ).listen(bodyScrollHandler);
+
+  const mobileSearchCloser = new AssignEvent(
+    ".mobile-search-closer",
+    "click",
+    "remove",
+    "active",
+    ".mobile-search"
+  ).listen(bodyScrollHandler);
+} catch (_) {}
