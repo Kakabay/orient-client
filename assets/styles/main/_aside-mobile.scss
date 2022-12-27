@@ -85,7 +85,7 @@
   max-height: 80vh;
   overflow-y: auto;
   @include flex(column);
-  a {
+  a:not(.aside-mobile-more) {
     border-bottom: 0.1rem solid $invisible-gray;
     padding: 1.5rem 0;
     @include flex;
@@ -160,9 +160,20 @@
   }
 }
 
+.aside-mobile-more {
+  margin: 2rem 0;
+  background: $base-green;
+  display: block;
+  padding: 1.8rem 0 1rem;
+  color: $base-white;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 .burger-list-ul {
   li {
-    a {
+    a,
+    div {
       display: block;
       width: 100%;
       font-size: 2rem;

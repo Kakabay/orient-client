@@ -25,6 +25,14 @@
   @include flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 1.6rem;
+
+  h1 {
+    font-size: 4rem;
+    color: $base-red;
+    letter-spacing: -1.5px;
+    font-family: "Oswald", sans-serif;
+  }
 }
 
 .header-right {
@@ -82,7 +90,20 @@
 //     justify-content: space-between;
 //   }
 // }
+
+@media screen and (max-width: 1100px) {
+  .header-left {
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+}
 @media screen and (max-width: 950px) {
+  .header-left {
+    h1 {
+      display: none;
+    }
+  }
   .header-inner {
     @include flex;
     justify-content: space-between;

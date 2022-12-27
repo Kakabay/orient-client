@@ -1,5 +1,6 @@
 @import "./swiper-bundle.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -86,6 +87,13 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  gap: 1.6rem;
+}
+.header-left h1 {
+  font-size: 4rem;
+  color: rgb(255, 12, 0);
+  letter-spacing: -1.5px;
+  font-family: "Oswald", sans-serif;
 }
 
 .header-right {
@@ -141,7 +149,15 @@ a {
   height: 2.5rem;
 }
 
+@media screen and (max-width: 1100px) {
+  .header-left h1 {
+    font-size: 2.8rem;
+  }
+}
 @media screen and (max-width: 950px) {
+  .header-left h1 {
+    display: none;
+  }
   .header-inner {
     display: flex;
     flex-direction: row;
@@ -789,6 +805,7 @@ a {
 
 .main-news-min-item {
   position: relative;
+  height: 30%;
 }
 
 .main-news-min-bg {
@@ -1986,7 +2003,7 @@ a {
   /* Handle */
   /* Handle on hover */
 }
-.aside-mobile-items a {
+.aside-mobile-items a:not(.aside-mobile-more) {
   border-bottom: 0.1rem solid rgba(126, 126, 126, 0.5);
   padding: 1.5rem 0;
   display: flex;
@@ -1996,11 +2013,11 @@ a {
   gap: 2rem;
   color: rgb(36, 36, 36);
 }
-.aside-mobile-items a:hover {
+.aside-mobile-items a:not(.aside-mobile-more):hover {
   transition: 0.3s all ease;
   border-color: rgb(3, 159, 55);
 }
-.aside-mobile-items a:hover .content {
+.aside-mobile-items a:not(.aside-mobile-more):hover .content {
   transition: 0.3s all ease;
   color: rgb(3, 159, 55);
 }
@@ -2052,7 +2069,18 @@ a {
   transform: rotateX(180deg);
 }
 
-.burger-list-ul li a {
+.aside-mobile-more {
+  margin: 2rem 0;
+  background: rgb(3, 159, 55);
+  display: block;
+  padding: 1.8rem 0 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.burger-list-ul li a,
+.burger-list-ul li div {
   display: block;
   width: 100%;
   font-size: 2rem;
