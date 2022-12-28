@@ -50,6 +50,11 @@
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 700px) {
+  .main-advert a img {
+    object-fit: contain;
+  }
+}
 
 // PAGE CONTENT
 @import "./main/main-news";

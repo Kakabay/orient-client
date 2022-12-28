@@ -632,6 +632,12 @@ a {
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 700px) {
+  .main-advert a img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 .main-news-inner {
   gap: 1.5rem;
   display: grid;
@@ -797,10 +803,6 @@ a {
 .photo-scroller.active .photo-scroller-inner {
   transform: scale(1);
   transition: 0.3s all ease;
-}
-
-.mainAdvertSwiper .swiper-slide {
-  height: 17rem;
 }
 
 .photoScrollerSwiper {
