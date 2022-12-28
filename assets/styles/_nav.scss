@@ -253,6 +253,12 @@
   }
 }
 
+.header-search-icon {
+  img {
+    pointer-events: none;
+  }
+}
+
 .header-search-icon,
 .header-burger {
   cursor: pointer;
