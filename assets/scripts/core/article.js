@@ -204,6 +204,12 @@ const articleSwiper = new Swiper(".articleSwiper", {
   },
 });
 
+if (articleSwiper.slides.length < 20) {
+  document.querySelector(".article-prev").style.display = "none";
+  document.querySelector(".article-next").style.display = "none";
+  articleSwiper.disable();
+}
+
 const articleBottomSwiper = new Swiper(".articleBottomSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,

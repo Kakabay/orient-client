@@ -9,7 +9,7 @@
 .main-advert {
   a {
     display: block;
-    @include imgStyle($objFit: cover);
+    @include imgStyle($objFit: contain);
   }
 }
 

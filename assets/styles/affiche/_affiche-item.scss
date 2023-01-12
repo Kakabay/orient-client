@@ -28,7 +28,7 @@
   align-self: center;
 }
 .affiche-item-top {
-  @include grid(false, 64% auto);
+  @include grid(false, 50% auto);
   gap: 1.8rem;
 
   .affiche-item-data {
