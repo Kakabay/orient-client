@@ -116,7 +116,7 @@
   align-items: flex-end;
 
   .trending-img {
-    @include imgStyle(11.7rem, 7.5rem, cover);
+    @include imgStyle(11.7rem, unset, cover);
   }
 }
 
@@ -130,11 +130,11 @@
 
 // Media
 @media screen and (max-width: 1500px) {
-  .trending-item {
-    &:last-child {
-      display: none;
-    }
-  }
+  // .trending-item {
+  //   &:last-child {
+  //     display: none;
+  //   }
+  // }
 }
 @media screen and (max-width: 1150px) {
   .trending-banner {
