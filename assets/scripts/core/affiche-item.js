@@ -231,21 +231,21 @@ const runBtns = new NewsBtn(".news-global").activateSwitch(
   }
 );
 
-const mobileAside = new AssignEvent(
-  ".aside-mobile-open",
-  "click",
-  "toggle",
-  "active",
-  ".aside-mobile"
-).listen(bodyScrollHandler);
+// const mobileAside = new AssignEvent(
+//   ".aside-mobile-open",
+//   "click",
+//   "toggle",
+//   "active",
+//   ".aside-mobile"
+// ).listen(bodyScrollHandler);
 
-const mobileAsideCloser = new AssignEvent(
-  ".aside-mobile-out",
-  "click",
-  "remove",
-  "active",
-  ".aside-mobile"
-).listen(bodyScrollHandler);
+// const mobileAsideCloser = new AssignEvent(
+//   ".aside-mobile-out",
+//   "click",
+//   "remove",
+//   "active",
+//   ".aside-mobile"
+// ).listen(bodyScrollHandler);
 
 // Mobile search
 try {
@@ -265,3 +265,19 @@ try {
     ".mobile-search"
   ).listen(bodyScrollHandler);
 } catch (_) {}
+
+const afficheSwiper = new Swiper(".afficheSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: false,
+  navigation: {
+    prevEl: ".affiche-prev",
+    nextEl: ".affiche-next",
+  },
+});
+
+if (afficheSwiper.slides.length < 2) {
+  document.querySelector(".affiche-prev").style.display = "none";
+  document.querySelector(".affiche-next").style.display = "none";
+  afficheSwiper.disable();
+}

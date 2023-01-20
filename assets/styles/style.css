@@ -2598,6 +2598,11 @@ a {
   color: rgb(3, 159, 55);
 }
 
+.affiche-next,
+.affiche-prev {
+  top: 40%;
+}
+
 .affiche-item-img {
   max-width: unset;
   max-height: unset;
@@ -2638,6 +2643,10 @@ a {
 }
 
 @media screen and (max-width: 1080px) {
+  .affiche-swiper-wrapper {
+    max-width: calc(100vw - 8rem);
+    margin: 0 auto;
+  }
   .affiche-item-inner {
     grid-template-columns: 1fr;
   }
@@ -2651,6 +2660,11 @@ a {
   .affiche-item-top .affiche-item-data {
     justify-self: unset;
     align-self: unset;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .affiche-swiper-wrapper {
+    max-width: calc(100vw - 5rem);
   }
 }
 @media screen and (max-width: 800px) {
