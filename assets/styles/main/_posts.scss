@@ -31,6 +31,10 @@
   &.sm {
     .trending-img {
       overflow: hidden;
+
+      img {
+        height: 14rem;
+      }
     }
   }
   &.big {

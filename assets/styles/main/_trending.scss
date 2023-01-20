@@ -117,6 +117,10 @@
 
   .trending-img {
     @include imgStyle(11.7rem, unset, cover);
+
+    img {
+      height: 9rem;
+    }
   }
 }
 

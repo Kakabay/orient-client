@@ -59,6 +59,10 @@
     padding: 1rem 0.6rem;
     width: 100%;
     font-weight: bold;
+
+    &::placeholder {
+      color: black;
+    }
   }
 
   button {

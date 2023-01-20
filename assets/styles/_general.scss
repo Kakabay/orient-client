@@ -29,6 +29,14 @@ ul {
   list-style-type: none;
 }
 
+ol {
+  margin-left: 1rem;
+  li {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+}
+
 a {
   color: #000;
   text-decoration: none;
