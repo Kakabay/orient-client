@@ -204,7 +204,7 @@ const articleSwiper = new Swiper(".articleSwiper", {
   },
 });
 
-if (articleSwiper.slides.length < 20) {
+if (articleSwiper.slides.length < 2) {
   document.querySelector(".article-prev").style.display = "none";
   document.querySelector(".article-next").style.display = "none";
   articleSwiper.disable();
@@ -296,21 +296,21 @@ numeratedNavSectionList.forEach((element) => {
   });
 });
 
-const mobileAside = new AssignEvent(
-  ".aside-mobile-open",
-  "click",
-  "toggle",
-  "active",
-  ".aside-mobile"
-).listen(bodyScrollHandler);
+// const mobileAside = new AssignEvent(
+//   ".aside-mobile-open",
+//   "click",
+//   "toggle",
+//   "active",
+//   ".aside-mobile"
+// ).listen(bodyScrollHandler);
 
-const mobileAsideCloser = new AssignEvent(
-  ".aside-mobile-out",
-  "click",
-  "remove",
-  "active",
-  ".aside-mobile"
-).listen(bodyScrollHandler);
+// const mobileAsideCloser = new AssignEvent(
+//   ".aside-mobile-out",
+//   "click",
+//   "remove",
+//   "active",
+//   ".aside-mobile"
+// ).listen(bodyScrollHandler);
 
 // Mobile search
 try {
