@@ -296,21 +296,21 @@ numeratedNavSectionList.forEach((element) => {
   });
 });
 
-// const mobileAside = new AssignEvent(
-//   ".aside-mobile-open",
-//   "click",
-//   "toggle",
-//   "active",
-//   ".aside-mobile"
-// ).listen(bodyScrollHandler);
+const mobileAside = new AssignEvent(
+  ".aside-mobile-open",
+  "click",
+  "toggle",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
 
-// const mobileAsideCloser = new AssignEvent(
-//   ".aside-mobile-out",
-//   "click",
-//   "remove",
-//   "active",
-//   ".aside-mobile"
-// ).listen(bodyScrollHandler);
+const mobileAsideCloser = new AssignEvent(
+  ".aside-mobile-out",
+  "click",
+  "remove",
+  "active",
+  ".aside-mobile"
+).listen(bodyScrollHandler);
 
 // Mobile search
 try {
