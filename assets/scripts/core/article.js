@@ -198,6 +198,10 @@ const articleSwiper = new Swiper(".articleSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".article-prev",
     nextEl: ".article-next",
@@ -215,7 +219,7 @@ const articleBottomSwiper = new Swiper(".articleBottomSwiper", {
   spaceBetween: 0,
   loop: false,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   loop: true,

@@ -223,6 +223,10 @@ const mainNewsSwiper = new Swiper(".mainNewsSwiper", {
   spaceBetween: 0,
   lazyLoading: true,
   loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".main-news-prev",
     nextEl: ".main-news-next",
@@ -233,6 +237,10 @@ const videoSwiper = new Swiper(".videoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
   lazyLoading: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".video-prev",
     nextEl: ".video-next",
@@ -242,6 +250,10 @@ const videoSwiper = new Swiper(".videoSwiper", {
 const photoSwiper = new Swiper(".photoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".photo-prev",
     nextEl: ".photo-next",
@@ -251,6 +263,10 @@ const photoSwiper = new Swiper(".photoSwiper", {
 const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".photo-scroller-prev",
     nextEl: ".photo-scroller-next",
@@ -262,7 +278,8 @@ const bannerSwiper_1 = new Swiper(".bannerSwiper-1", {
   spaceBetween: 0,
   loop: true,
   autoplay: {
-    delay: "5000",
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 
@@ -272,7 +289,8 @@ const bannerSwiper_2 = new Swiper(".bannerSwiper-2", {
 
   loop: true,
   autoplay: {
-    delay: "5000",
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 
@@ -282,7 +300,8 @@ const mainAdvertSwiper = new Swiper(".mainAdvertSwiper", {
 
   loop: true,
   autoplay: {
-    delay: "5000",
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 
@@ -290,6 +309,10 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
   slidesPerView: 5,
   spaceBetween: 60,
   centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   loop: true,
   navigation: {
     prevEl: ".partner-prev",
@@ -409,7 +432,8 @@ const trendingSwiper = new Swiper(".trendingSwiper", {
   spaceBetween: 0,
   centeredSlides: true,
   autoplay: {
-    delay: "5000",
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 

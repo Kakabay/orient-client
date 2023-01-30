@@ -171,6 +171,10 @@ const mobileAsideCloser = new AssignEvent(
 const photoScrollerSwiper = new Swiper(".photoScrollerSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     prevEl: ".photo-scroller-prev",
     nextEl: ".photo-scroller-next",

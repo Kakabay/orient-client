@@ -269,10 +269,14 @@ try {
 const afficheSwiper = new Swiper(".afficheSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
-  loop: false,
   navigation: {
     prevEl: ".affiche-prev",
     nextEl: ".affiche-next",
+  },
+  loop: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
 
