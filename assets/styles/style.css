@@ -2433,6 +2433,11 @@ a {
   font-size: 1.7rem;
   line-height: 2.5rem;
 }
+.article-desc p img {
+  max-height: 55rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .article-links {
   padding-top: 2.8rem;

@@ -52,6 +52,13 @@
     font-size: 1.7rem;
     line-height: 2.5rem;
   }
+
+  p {
+    img {
+      max-height: 55rem;
+      object-fit: cover;
+    }
+  }
 }
 
 .article-links {
