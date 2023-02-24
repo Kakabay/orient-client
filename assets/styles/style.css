@@ -973,6 +973,9 @@ a {
   }
 }
 @media screen and (max-width: 950px) {
+  .main-news-min-bg {
+    height: 52vw;
+  }
   .main-news-min {
     display: none;
   }
@@ -991,11 +994,6 @@ a {
   }
   .main-inner-content {
     gap: 2.5rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .main-news-min-bg {
-    height: 30rem;
   }
 }
 .aside {
@@ -2385,7 +2383,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-height: 55rem;
+  height: 40rem;
   overflow: hidden;
 }
 .article-item img {

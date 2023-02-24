@@ -13,7 +13,7 @@
   @include imgStyle($objFit: cover);
   @include flex;
   align-items: center;
-  max-height: 55rem;
+  height: 40rem;
   overflow: hidden;
 }
 
