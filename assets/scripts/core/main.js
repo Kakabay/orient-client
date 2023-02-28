@@ -237,10 +237,6 @@ const videoSwiper = new Swiper(".videoSwiper", {
   slidesPerView: 3,
   spaceBetween: 60,
   lazyLoading: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
   navigation: {
     prevEl: ".video-prev",
     nextEl: ".video-next",

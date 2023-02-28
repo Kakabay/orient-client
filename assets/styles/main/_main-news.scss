@@ -101,7 +101,6 @@
 
 .main-news-min-bg {
   @include imgStyle($objFit: cover);
-  // height: 40rem;
 }
 
 .main-news-min-info {
@@ -204,7 +203,7 @@
 // Media
 @media screen and (max-width: 1070px) {
   .main-news-min-bg {
-    height: 40rem;
+    height: 54rem;
   }
   .mainNewsSwiper {
     display: block;
@@ -227,6 +226,9 @@
 }
 
 @media screen and (max-width: 950px) {
+  .main-news-min-bg {
+    height: 52vw;
+  }
   .main-news-min {
     display: none;
   }
@@ -248,8 +250,8 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .main-news-min-bg {
-    height: 30rem;
-  }
-}
+// @media screen and (max-width: 500px) {
+//   .main-news-min-bg {
+//     height: 30rem;
+//   }
+// }
