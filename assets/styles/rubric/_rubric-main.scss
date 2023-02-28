@@ -9,9 +9,11 @@
   display: grid;
   gap: 8rem;
 }
+
 .rubric-item {
   align-items: center;
   gap: 1.5rem;
+
   .sub-news-left-content-item-date-content-info {
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -21,15 +23,19 @@
     font-size: 1.7rem;
     line-height: 2.5rem;
   }
+
   .sub-news-left-content-item-img {
     @include imgStyle(35rem, 20rem, cover);
   }
+
   .sub-news-left-content-item-content {
     gap: 0.8rem;
+
     h3 {
       font-size: 2rem;
     }
   }
+
   .sub-news-left-content-item-date-content-head {
     font-size: 1.6rem;
     color: $base-gray;
@@ -38,6 +44,7 @@
 
 .rubric-bottom {
   padding: 0 6.7rem;
+  margin-top: 50px;
   gap: 1rem;
 
   span {
@@ -48,6 +55,7 @@
 .heading__footer-input {
   max-width: 8rem;
   height: 4rem;
+
   input {
     text-align: center;
     font-size: 20px;
@@ -62,6 +70,7 @@
 }
 
 @media screen and (max-width: 1080px) {
+
   .rubric-items,
   .rubric-bottom {
     padding: 0;

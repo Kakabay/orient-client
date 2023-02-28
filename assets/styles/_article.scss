@@ -4,6 +4,158 @@
   gap: 4rem;
 }
 
+.article-wrap {
+  padding-top: 30px;
+}
+
+.article_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    border: 1px solid transparent;
+    background: #00822C;
+    color: #fff;
+    display: block;
+    padding: 8px 30px;
+    transition: .2s linear;
+
+    &:hover {
+      background: transparent;
+      border-color: #00822C;
+      color: #00822C;
+    }
+  }
+}
+
+.article {
+  &_desc {
+    &-title {
+      color: #292929;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    &-result {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 50px 0 40px;
+      color: #00822C;
+      text-align: center
+    }
+
+    &-photo {
+      display: block;
+      width: 100%;
+      height: 450px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        -o-object-fit: contain;
+      }
+    }
+  }
+
+  &-test {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    button {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.4;
+
+      width: 200px;
+      padding: 5px 14px;
+      margin-bottom: 12px;
+      color: #00822C;
+      border: 1px solid #00822C;
+      transition: .2s linear;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #00822C;
+        margin-right: 10px;
+        text-align: center;
+        align-self: center;
+      }
+
+      &:hover {
+        border-color: #000;
+        color: #000;
+
+        &::before {
+          background: #000;
+        }
+      }
+
+      &.true {
+        background: #00822C;
+        border-color: #00822C;
+        color: #fff;
+
+        &::before {
+          background: #fff;
+        }
+      }
+
+      &.false {
+        background: #FF0C00;
+        border-color: #FF0C00;
+        color: #fff;
+
+        &::before {
+          background: #fff;
+        }
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &-hint {
+    display: none;
+    position: relative;
+
+    &.active {
+      display: block;
+      animation: hint .2s linear;
+    }
+  }
+}
+
+@keyframes hint {
+  0% {
+    top: 50px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
 .article-content-top {
   @include flex(column);
   gap: 1.2rem;
@@ -25,6 +177,7 @@
 .article-head {
   @include flex(column);
   gap: 1.2rem;
+
   h2 {
     font-size: 2.4rem;
     font-weight: bold;
@@ -47,6 +200,7 @@
   padding-top: 1.8rem;
   @include flex(column);
   gap: 2.4rem;
+
   p,
   h5 {
     font-size: 1.7rem;
@@ -75,6 +229,7 @@
 }
 
 .article-bottom-head {
+
   h4,
   span {
     color: $base-black;
@@ -92,12 +247,18 @@
   display: none;
 }
 
+.align-center {
+  align-items: center;
+  flex-direction: row;
+}
+
 // Media
 
 @media screen and (max-width: 1080px) {
   .article-aside {
     display: none;
   }
+
   .article-inner {
     display: block;
   }
@@ -107,6 +268,7 @@
   .article-inner {
     padding: 2.2rem 0 5rem;
   }
+
   .article-head {
     flex-direction: column-reverse;
 
@@ -119,11 +281,14 @@
       color: $mild-gray;
     }
   }
+
   .article-content-top {
     gap: 2.5rem;
   }
+
   .article-content-bottom {
     gap: 2.5rem;
+
     h3 {
       font-size: 2rem;
       letter-spacing: 0.1em;
@@ -133,6 +298,7 @@
 }
 
 @media screen and (max-width: 700px) {
+
   // .article-swiper-wrapper-lower {
   //   display: none;
   // }
@@ -140,15 +306,27 @@
     @include flex(column);
     gap: 2.5rem;
   }
+
+  .article {
+    &_desc {
+      &-photo {
+        height: auto;
+      }
+    }
+  }
+
   .article-content-info {
     font-size: 1.7rem;
   }
+
   .article-bottom-head {
     font-size: 1.5rem;
   }
+
   .sub-news-left-content-item-content {
     gap: 0.5rem;
   }
+
   .article-bottom-item {
     gap: 1.4rem;
   }
