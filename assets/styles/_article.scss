@@ -19,16 +19,16 @@
     font-size: 15px;
     line-height: 1.4;
     border: 1px solid transparent;
-    background: #00822C;
+    background: #00822c;
     color: #fff;
     display: block;
     padding: 8px 30px;
-    transition: .2s linear;
+    transition: 0.2s linear;
 
     &:hover {
       background: transparent;
-      border-color: #00822C;
-      color: #00822C;
+      border-color: #00822c;
+      color: #00822c;
     }
   }
 }
@@ -47,8 +47,8 @@
       font-size: 20px;
       line-height: 1.4;
       margin: 50px 0 40px;
-      color: #00822C;
-      text-align: center
+      color: #00822c;
+      text-align: center;
     }
 
     &-photo {
@@ -84,17 +84,17 @@
       width: 200px;
       padding: 5px 14px;
       margin-bottom: 12px;
-      color: #00822C;
-      border: 1px solid #00822C;
-      transition: .2s linear;
+      color: #00822c;
+      border: 1px solid #00822c;
+      transition: 0.2s linear;
 
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background: #00822C;
+        background: #00822c;
         margin-right: 10px;
         text-align: center;
         align-self: center;
@@ -110,8 +110,8 @@
       }
 
       &.true {
-        background: #00822C;
-        border-color: #00822C;
+        background: #00822c;
+        border-color: #00822c;
         color: #fff;
 
         &::before {
@@ -120,8 +120,8 @@
       }
 
       &.false {
-        background: #FF0C00;
-        border-color: #FF0C00;
+        background: #ff0c00;
+        border-color: #ff0c00;
         color: #fff;
 
         &::before {
@@ -141,7 +141,7 @@
 
     &.active {
       display: block;
-      animation: hint .2s linear;
+      animation: hint 0.2s linear;
     }
   }
 }
@@ -164,7 +164,7 @@
 .article-item {
   @include imgStyle($objFit: cover);
   @include flex;
-  align-items: center;
+  align-items: flex-start;
   height: 40rem;
   overflow: hidden;
 }
@@ -201,6 +201,10 @@
   @include flex(column);
   gap: 2.4rem;
 
+  a {
+    color: rgb(59, 59, 255);
+  }
+
   p,
   h5 {
     font-size: 1.7rem;
@@ -229,7 +233,6 @@
 }
 
 .article-bottom-head {
-
   h4,
   span {
     color: $base-black;
@@ -298,7 +301,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
   // .article-swiper-wrapper-lower {
   //   display: none;
   // }
