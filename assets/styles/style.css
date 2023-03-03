@@ -1660,7 +1660,7 @@ a {
   overflow: hidden;
 }
 .posts-item.sm .trending-img img {
-  height: 14rem;
+  height: 100%;
 }
 .posts-item.big {
   grid-area: big;
