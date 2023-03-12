@@ -24,6 +24,8 @@
 
 .main-news-bg {
   @include imgStyle($objFit: cover);
+  display: flex;
+  align-items: flex-start;
 }
 
 .main-news-overlay {
@@ -101,6 +103,8 @@
 
 .main-news-min-bg {
   @include imgStyle($objFit: cover);
+  display: flex;
+  align-items: flex-start;
 }
 
 .main-news-min-info {
