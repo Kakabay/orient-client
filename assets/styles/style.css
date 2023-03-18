@@ -1478,6 +1478,7 @@ a {
 }
 
 .trending-head {
+  width: 205% !important;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1619,7 +1620,10 @@ a {
 @media screen and (max-width: 950px) {
   .trending-inner {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .trending-head {
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 800px) {
