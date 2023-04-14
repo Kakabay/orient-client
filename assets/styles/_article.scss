@@ -8,7 +8,6 @@
   padding-top: 30px;
 }
 
-
 .article {
   &_desc {
     &-title {
@@ -60,16 +59,16 @@
       font-size: 15px;
       line-height: 1.4;
       border: 1px solid transparent;
-      background: #00822C;
+      background: #00822c;
       color: #fff;
       display: block;
       padding: 8px 30px;
-      transition: .2s linear;
+      transition: 0.2s linear;
 
       &:hover {
         background: transparent;
-        border-color: #00822C;
-        color: #00822C;
+        border-color: #00822c;
+        color: #00822c;
       }
     }
   }
@@ -170,10 +169,10 @@
 }
 
 .article-item {
-  @include imgStyle($objFit: cover);
+  @include imgStyle($objFit: contain);
   @include flex;
   align-items: flex-start;
-  height: 40rem;
+  height: 55rem;
   overflow: hidden;
 }
 
@@ -287,11 +286,9 @@
               width: 100%;
               padding-top: 20px;
             }
-
           }
         }
       }
-
     }
   }
 
@@ -339,7 +336,7 @@
           &-wrapper {
             width: calc(50% - 2.4rem);
 
-            &:nth-of-type(n+3) {
+            &:nth-of-type(n + 3) {
               display: none;
             }
           }
@@ -348,7 +345,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 700px) {
 
@@ -386,7 +382,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
   .article-aside {
     &.test-aside {
       margin-top: 50px;
