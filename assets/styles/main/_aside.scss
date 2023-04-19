@@ -39,7 +39,7 @@
     @include transition-std;
 
     &::before {
-      content: "";
+      content: '';
       border-radius: 50%;
       display: block;
       width: 0.4rem;
@@ -133,11 +133,11 @@
 .aside-content-item-info {
   font-size: 1.5rem;
   line-height: 1.77rem;
-  // display: -webkit-box;
-  // -webkit-line-clamp: 2;
-  // -webkit-box-orient: vertical;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .aside-content-more {

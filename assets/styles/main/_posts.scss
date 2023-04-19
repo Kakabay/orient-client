@@ -5,16 +5,23 @@
 .posts-inner {
   @include flex(column);
   gap: 4rem;
+
+  .trending-head {
+    span {
+      width: 45%;
+    }
+  }
 }
 
 .posts-content {
   display: grid;
-  grid-template-areas: "big big sm1 sm2" "big big sm3 sm4" "sm5 sm6 sm7 sm8";
+  grid-template-areas: 'big big sm1 sm2' 'big big sm3 sm4' 'sm5 sm6 sm7 sm8';
   gap: 2.5rem;
 
   .trending-aside-content-head {
     h3 {
       display: block;
+      color: $base-green;
 
       & + span {
         display: block;

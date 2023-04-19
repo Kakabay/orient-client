@@ -40,7 +40,7 @@
   @include flex;
   align-items: center;
   gap: 0.4rem;
-  color: $base-green;
+  color: rgb(85, 85, 85);
   font-size: 1.4rem;
 }
 
@@ -49,11 +49,11 @@
   font-size: 1.5rem;
   color: $base-black;
   line-height: 1.6rem;
-  // display: -webkit-box;
-  // -webkit-line-clamp: 3;
-  // -webkit-box-orient: vertical;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   //
   &.edit {
@@ -140,7 +140,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     border-radius: 50%;
     display: block;
     width: 0.4rem;

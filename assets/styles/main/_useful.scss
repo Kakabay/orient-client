@@ -3,6 +3,12 @@
   display: grid;
   grid-template-columns: 67% auto;
   gap: 3.6rem;
+
+  .trending-head {
+    span {
+      width: 40% !important;
+    }
+  }
 }
 
 .useful-aside-item-top {
@@ -45,6 +51,12 @@
 .useful-aside {
   @include flex(column);
   gap: 2.5rem;
+
+  .trending-head {
+    span {
+      display: none;
+    }
+  }
 }
 
 .useful-main {
